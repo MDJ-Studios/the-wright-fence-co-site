@@ -5,7 +5,7 @@ A simple website for Cole Wright of "The Wright Fence Co"
 - HTML
 - CSS
 - JavaScript
-- React
+- Next JS
 - JSX
 
 # Screenshots
