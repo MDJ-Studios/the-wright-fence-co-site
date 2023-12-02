@@ -20,7 +20,7 @@ export default function SectionFenceTypes() {
                     </div>
                     {/* content image and right side */}
                     <div className="content-image">
-                        <Image src="/images/640.png" layout="fill" objectFit="cover" alt="fence 1 image" />
+                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 1 image" />
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@ export default function SectionFenceTypes() {
                     </div>
                     {/* content image and right side */}
                     <div className="content-image">
-                        <Image src="/images/640.png" layout="fill" objectFit="cover" alt="fence 2 image" />
+                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 2 image" />
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function SectionFenceTypes() {
                     </div>
                     {/* content image and right side */}
                     <div className="content-image">
-                        <Image src="/images/640.png" layout="fill" objectFit="cover" alt="fence 3 image" />
+                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 3 image" />
                     </div>
                 </div>
             </div>
