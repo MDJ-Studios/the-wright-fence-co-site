@@ -1,1 +1,0 @@
-Hey, Carlos, we should discuss CSS styling and whether or not we should do CSS modules, CSS stylesheets, Styled Components or use a framework.
