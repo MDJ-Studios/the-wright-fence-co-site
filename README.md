@@ -12,6 +12,7 @@ A simple website for Cole Wright of "The Wright Fence Co"
 
 # Resources
 
+- [Test Deployment on Netlify](https://the-wright-fence-co.netlify.app/)
 - [Project Board on GitHub](https://github.com/orgs/MDJ-Studios/projects/1)
 - [Wireframe on InvisionApp](https://danielscott100214.invisionapp.com/freehand/Wireframe--The-Wright-Fence-Co--AW80ysqpy)
 
