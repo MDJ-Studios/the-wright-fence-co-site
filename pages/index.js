@@ -2,10 +2,13 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import SectionFenceTypes from "@/components/content-fence-types";
+import ServiceOffering from "@/components/main-page/service-offering";
+import Carousel from "@/components/hero-carousel";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+    const slides = [{ image: "/images/fence1.jpg" }, { image: "/images/fence2.jpg" }, { image: "/images/fence3.jpg" }];
     return (
         <>
             <Head>
@@ -17,7 +20,8 @@ export default function Home() {
             </Head>
             <main className={`${styles.main} ${inter.className}`}>
                 {/* <h1>Home Page</h1> */}
-                <SectionFenceTypes />
+                <Carousel slides={slides} />
+                <ServiceOffering />
             </main>
         </>
     );
