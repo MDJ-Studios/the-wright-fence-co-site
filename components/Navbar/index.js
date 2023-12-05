@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import styles from "./navbar.module.css";
 
 function NavLink({ linkText, path, isScrollLink }) {
 
@@ -29,7 +30,7 @@ function NavLink({ linkText, path, isScrollLink }) {
 
 export default function Navbar() {
     return (
-        <nav>
+        <nav className={styles.navbar}>
             <h1>
                 <Link href="/">
                     The Wright Fence Co
