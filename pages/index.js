@@ -1,9 +1,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import SectionFenceTypes from "@/components/content-fence-types";
-import ServiceOffering from "@/components/main-page/service-offering";
-import Carousel from "@/components/hero-carousel";
+import ServiceOffering from "@/components/main-page/service-offering/";
+import Carousel from "@/components/hero-carousel/";
 
 const inter = Inter({ subsets: ["latin"] });
 
