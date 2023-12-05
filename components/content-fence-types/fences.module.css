@@ -1,16 +1,16 @@
 /* section parent */
 
-.section-fence h2 {
+.section_fence h2 {
     margin: 1rem 0 1rem 0;
     font-size: 1.8rem;
 }
 /* parent div */
 
-.parent-div {
+.parent_div {
     flex-direction: column;
 }
 
-.parent-div p {
+.parent_div p {
     width: 20rem;
 }
 
@@ -20,10 +20,14 @@
     margin: 1rem 0 1rem 0;
 }
 
-.content-image {
+.content_image {
     position: relative;
     width: 23rem;
     height: 16rem;
+}
+
+.content_image Image {
+    object-fit: cover;
 }
 
 .content h3 {
@@ -31,33 +35,33 @@
     font-weight: normal;
 }
 
-.content-text-box {
+.content_text {
     margin: 0 1rem 0 0;
 }
 /* helper classes */
-.flex-center {
+.flex_center {
     display: flex;
     justify-content: center;
     width: max-content;
 }
 
-.flex-wrap {
+.flex_wrap {
     flex-flow: row wrap;
 }
 
 /* mobile css */
 
 @media (max-width: 720px) {
-    .flex-center {
+    .flex_center {
         flex-direction: column;
     }
-    .content-text-box {
+    .content_text {
         margin: 0 0 1rem 0;
     }
 }
 
 @media (max-width: 380px) {
-    .content-image {
+    .content_image {
         position: relative;
         width: 100%;
         height: 13rem;

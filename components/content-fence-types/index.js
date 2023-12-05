@@ -1,15 +1,16 @@
 import Image from "next/image";
+import s from "./fences.module.css";
 
 export default function SectionFenceTypes() {
     return (
-        <section className="section-fence">
+        <section className={s.section_fence}>
             <h2>Fence Types We Offer</h2>
             {/* parent div */}
-            <div className="parent-div flex-center">
+            <div className={`${s.parent_div} ${s.flex_center}`}>
                 {/* fence type 1 */}
-                <div className="flex-center flex-wrap content">
+                <div className={`${s.flex_center} ${s.flex_wrap} ${s.content}`}>
                     {/* title + p and left side */}
-                    <div className="content-text-box">
+                    <div className={s.content_text}>
                         <h3>Fence Type #1</h3>
                         <p>
                             Hey, you know how I'm, like, always trying to save the planet? Here's my chance. I gave it a
@@ -19,15 +20,15 @@ export default function SectionFenceTypes() {
                         </p>
                     </div>
                     {/* content image and right side */}
-                    <div className="content-image">
+                    <div className={s.content_image}>
                         <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 1 image" />
                     </div>
                 </div>
 
                 {/* fence type 2 */}
-                <div className="flex-center flex-wrap content">
+                <div className={`${s.flex_center} ${s.flex_wrap} ${s.content}`}>
                     {/* title + p and left side */}
-                    <div className="content-text-box">
+                    <div className={s.content_text}>
                         <h3>Fence Type #2</h3>
                         <p>
                             Hey, you know how I'm, like, always trying to save the planet? Here's my chance. I gave it a
@@ -37,15 +38,15 @@ export default function SectionFenceTypes() {
                         </p>
                     </div>
                     {/* content image and right side */}
-                    <div className="content-image">
+                    <div className={s.content_image}>
                         <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 2 image" />
                     </div>
                 </div>
 
                 {/* fence type 3 */}
-                <div className="flex-center flex-wrap content">
+                <div className={s.flex_center s.flex_wrap s.content}>
                     {/* title + p and left side */}
-                    <div className="content-text-box">
+                    <div className={s.content_text}>
                         <h3>Fence Type #3</h3>
                         <p>
                             Hey, you know how I'm, like, always trying to save the planet? Here's my chance. I gave it a
@@ -55,8 +56,8 @@ export default function SectionFenceTypes() {
                         </p>
                     </div>
                     {/* content image and right side */}
-                    <div className="content-image">
-                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="fence 3 image" />
+                    <div className={s.content_image}>
+                        <Image src="/images/640.png" fill={true}  alt="fence 3 image" />
                     </div>
                 </div>
             </div>

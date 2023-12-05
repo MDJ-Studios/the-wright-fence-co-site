@@ -1,10 +1,10 @@
 /* section parent */
-.section-carousel {
-    margin: 5rem 0 5rem 0;
+.section_carousel {
+    margin: 0 0 5rem 0;
     position: relative;
     width: 100%;
-    max-width: 1100px;
-    height: 30rem;
+    height: 40rem;
+    padding: 0;
 }
 
 /* carousel images */
@@ -14,9 +14,9 @@
     transition-duration: 1s ease;
 }
 
-.slide.active {
+.slide_active {
     opacity: 1;
-    transition-duration: 1s;
+    transition-duration: 2s;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -25,7 +25,7 @@
 
 /* buttons */
 
-.button-parent {
+.button_parent {
     display: flex;
     justify-content: space-between;
     width: 10rem;
@@ -37,12 +37,9 @@
     transform: translate(-50%, -50%);
 }
 
-.button-parent button {
+.button_parent button {
     background: none;
     border: none;
-}
-
-.button {
     width: 4rem;
     height: 4rem;
 }
