@@ -1,3 +1,17 @@
 .navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    padding-left: 1rem;
+}
+
+.navbar > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar > ul > li {
+    margin-right: 1rem;
 }
