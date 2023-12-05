@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Burger from "../Burger-Menu-Button";
+import NavDrawer from "../Nav-Drawer";
 import styles from "./navbar.module.css";
 
 function NavLink({ linkText, path, isScrollLink }) {
@@ -22,7 +24,14 @@ function NavLink({ linkText, path, isScrollLink }) {
     
 }
 
-export default function Navbar() {
+export default function Navbar({ 
+    isSmallScreen, 
+    setIsSmallScreen,
+    isSmallerScreen, 
+    setIsSmallerScreen,
+    setNavOpen, 
+    navOpen 
+    }) {
     return (
         <nav className={styles.navbar}>
             <h1>
@@ -30,28 +39,44 @@ export default function Navbar() {
                     The Wright Fence Co
                 </Link>
             </h1>
-            <ul>
-                <NavLink 
-                    linkText="About Us" 
-                    path="/about" 
-                    isScrollLink={false} 
+            {
+                isSmallScreen || isSmallerScreen
+                ? <Burger
+                    navOpen={navOpen} 
+                    setNavOpen={setNavOpen}
+                 /> 
+                : <ul>
+                    <NavLink 
+                        linkText="About Us" 
+                        path="/about" 
+                        isScrollLink={false} 
+                    />
+                    <NavLink 
+                        linkText="Fence Types" 
+                        path="/fence-types" 
+                        isScrollLink={false} 
+                    />
+                    <NavLink 
+                        linkText="Contact"
+                        path="#contact" 
+                        isScrollLink={true} 
+                    />
+                    <NavLink 
+                        linkText="Services"
+                        path="#services" 
+                        isScrollLink={true} 
+                    />
+                </ul>
+            }
+            {
+                navOpen &&
+                <NavDrawer 
+                    isSmallScreen={isSmallScreen} 
+                    setIsSmallScreen={setIsSmallScreen} 
+                    setNavOpen={setNavOpen} 
+                    navOpen={navOpen}
                 />
-                <NavLink 
-                    linkText="Fence Types" 
-                    path="/fence-types" 
-                    isScrollLink={false} 
-                />
-                <NavLink 
-                    linkText="Contact"
-                    path="#contact" 
-                    isScrollLink={true} 
-                />
-                <NavLink 
-                    linkText="Services"
-                    path="#services" 
-                    isScrollLink={true} 
-                />
-            </ul>
+            }
         </nav>
      );
 }  
