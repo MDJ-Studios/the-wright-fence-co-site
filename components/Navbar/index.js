@@ -1,15 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 
 function NavLink({ linkText, path, isScrollLink }) {
-
-    const [router, setRouter] = useState(null);
-
-    useEffect(() => {
-        setRouter(useRouter());
-    }, []);
+    const router = useRouter();
     
     const isActive = pathname => router ? router.pathname === pathname : false;
 
