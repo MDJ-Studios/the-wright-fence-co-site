@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 // TODO: decide if we need to keep this ^
 import ServiceOffering from "@/components/main-page/service-offering/";
 import Carousel from "@/components/hero-carousel/";
+import Contact from "@/components/main-page/contact-us";
 import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function Home() {
                 <main className={`${styles.main} ${inter.className}`}>
                     <Carousel slides={slides} />
                     <ServiceOffering />
+                    <Contact />
                 </main>
             </Layout>
         </>

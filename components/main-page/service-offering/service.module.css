@@ -2,6 +2,7 @@
 
 .section_service {
     width: 100%;
+    margin: 2rem 0 2rem 0;
 }
 
 /* parent container */
@@ -58,6 +59,7 @@
 
 @media (max-width: 970px) {
     .parent_container {
+        height: max-content;
         width: max-content;
         flex-direction: column;
     }
