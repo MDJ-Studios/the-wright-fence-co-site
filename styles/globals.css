@@ -8,14 +8,12 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
 
-    --primary-glow: conic-gradient(
-        from 180deg at 50% 50%,
-        #16abff33 0deg,
-        #0885ff33 55deg,
-        #54d6ff33 120deg,
-        #0071ff33 160deg,
-        transparent 360deg
-    );
+    --primary-glow: conic-gradient(from 180deg at 50% 50%,
+            #16abff33 0deg,
+            #0885ff33 55deg,
+            #54d6ff33 120deg,
+            #0071ff33 160deg,
+            transparent 360deg);
     --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 
     --tile-start-rgb: 239, 245, 249;
@@ -35,12 +33,10 @@
         --background-end-rgb: 0, 0, 0;
 
         --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-        --secondary-glow: linear-gradient(
-            to bottom right,
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0.3)
-        );
+        --secondary-glow: linear-gradient(to bottom right,
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0.3));
 
         --tile-start-rgb: 2, 13, 46;
         --tile-end-rgb: 2, 5, 19;
@@ -85,3 +81,60 @@ a {
         color-scheme: dark;
     }
 }
+
+
+.burger {
+    display: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+    justify-self: end;
+    font-size: 2.5rem;
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.1s;
+    z-index: 100;
+}
+
+.burger:active {
+    transform: scale(1.2);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1065px) {
+    .burger {
+      margin: 0 0 0 .5rem;
+      color: #ffffff;
+      display: block;
+    }
+  
+    .burger:focus {
+      outline: none;
+    }
+  
+  
+    .burger div {
+      width: 2rem;
+      height: 0.25rem;
+      background: #000;
+      border-radius: 10px;
+      transition: all 0.3s linear;
+      transform-origin: .650rem;
+      transform: rotate(0);
+    }    
+  }
+  
+  
+
+
+  
