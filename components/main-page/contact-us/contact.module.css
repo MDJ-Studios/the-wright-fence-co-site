@@ -1,0 +1,53 @@
+/* Section Parent */
+.section_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Parent Div */
+.div_parent {
+    width: 35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* child divs */
+.map_parent {
+    border: 2px solid white;
+    height: 15rem;
+    width: 15rem;
+    /* margin-right: 6rem; */
+}
+
+.form_parent {
+    height: 100%;
+}
+
+.name_parent {
+    width: 15;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.email_parent {
+    width: 15;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.message_parent {
+    width: 15rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+}
+
+/* helper class */
+
+.full {
+    height: 100%;
+    width: 100%;
+}

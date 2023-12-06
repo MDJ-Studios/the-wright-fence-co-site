@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import ServiceOffering from "@/components/main-page/service-offering/";
 import Carousel from "@/components/hero-carousel/";
+import Contact from "@/components/main-page/contact-us";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
                 {/* <h1>Home Page</h1> */}
                 <Carousel slides={slides} />
                 <ServiceOffering />
+                <Contact />
             </main>
         </>
     );
