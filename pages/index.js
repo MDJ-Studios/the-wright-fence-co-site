@@ -1,8 +1,11 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+// TODO: decide if we need to keep this ^
 import ServiceOffering from "@/components/main-page/service-offering/";
 import Carousel from "@/components/hero-carousel/";
+import Contact from "@/components/main-page/contact-us";
+import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +20,13 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={`${styles.main} ${inter.className}`}>
-                {/* <h1>Home Page</h1> */}
-                <Carousel slides={slides} />
-                <ServiceOffering />
-            </main>
+            <Layout>
+                <main className={`${styles.main} ${inter.className}`}>
+                    <Carousel slides={slides} />
+                    <ServiceOffering />
+                    <Contact />
+                </main>
+            </Layout>
         </>
     );
 }
