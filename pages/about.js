@@ -1,3 +1,4 @@
+import Layout from "@/components/Layout";
 import Head from "next/head";
 
 export default function About() {
@@ -6,13 +7,15 @@ export default function About() {
 			<Head>
 				<title>About | The Wright Fence Co.</title>
 			</Head>
-			<main>
-				<div>
-					<p>
-						This is the about page
-					</p>
-				</div>
-			</main>
+			<Layout>
+				<main>
+					<div>
+						<p>
+							This is the about page
+						</p>
+					</div>
+				</main>
+			</Layout>
 		</>
 	);
 }
