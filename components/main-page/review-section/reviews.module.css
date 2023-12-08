@@ -1,8 +1,13 @@
 /* section parent */
 
-.section_service {
+.section_reviews {
     width: 100%;
-    margin: 2rem 0 2rem 0;
+    margin: 6rem 0 6rem 0;
+}
+
+.section_reviews h2 {
+    font-size: 2rem;
+    margin: 0 0 4rem 0;
 }
 
 /* parent container */
@@ -29,17 +34,17 @@
 .content_text {
     width: 100%;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
 }
 
-.content_text h2 {
-    font-size: 1.6rem;
+.content_text h3 {
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
 }
 
 .content_text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* helper div  */
@@ -57,12 +62,18 @@
 @media (max-width: 970px) {
     .parent_container {
         height: max-content;
-        width: max-content;
         flex-flow: row wrap;
     }
 
     .content_container {
         font-size: 1rem;
-        margin: 0 3rem 3rem 3rem;
+        margin: 0 3rem 2rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_reviews h2 {
+        font-size: 2rem;
+        margin: 0 2rem 4rem 2rem;
     }
 }
