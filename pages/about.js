@@ -17,7 +17,7 @@ export default function About() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel slides={slides} />
+                    <Carousel slides={slides} simpleMode={0} />
                     <AboutUs />
                 </main>
             </Layout>

@@ -22,7 +22,7 @@ export default function Home() {
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel slides={slides} />
+                    <Carousel slides={slides} simpleMode={0} />
                     <ServiceOffering />
                     <Reviews />
                     <Contact />

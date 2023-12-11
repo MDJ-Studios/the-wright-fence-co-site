@@ -3,7 +3,7 @@
 .section_reviews {
     width: 100%;
     margin: 6rem auto 6rem auto;
-    max-width: max-content;
+    max-width: 50rem;
 }
 
 .section_reviews h2 {
@@ -12,6 +12,10 @@
 }
 
 /* parent container */
+
+/* .parent_container {
+    width: 50rem;
+} */
 
 /* child divs */
 

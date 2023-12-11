@@ -5,7 +5,7 @@ import Carousel from "@/components/hero-carousel";
 import SectionFenceTypes from "@/components/fence-types-page/content-fence-types";
 
 export default function FenceTypes() {
-    const slides = [{ image: "/images/fence1.jpg" }, { image: "/images/fence2.jpg" }, { image: "/images/fence3.jpg" }];
+    const slides = [{ image: "/images/fence1.jpg" }];
     return (
         <>
             <Head>
@@ -17,7 +17,7 @@ export default function FenceTypes() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel slides={slides} />
+                    <Carousel slides={slides} simpleMode={1} />
                     <SectionFenceTypes />
                 </main>
             </Layout>
