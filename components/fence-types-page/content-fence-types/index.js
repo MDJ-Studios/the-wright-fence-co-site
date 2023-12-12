@@ -44,7 +44,7 @@ export default function SectionFenceTypes() {
                 </div>
 
                 {/* fence type 3 */}
-                <div className={s.flex_center s.flex_wrap s.content}>
+                <div className={`${s.flex_center} ${s.flex_wrap} ${s.content}`}>
                     {/* title + p and left side */}
                     <div className={s.content_text}>
                         <h3>Fence Type #3</h3>
@@ -57,7 +57,7 @@ export default function SectionFenceTypes() {
                     </div>
                     {/* content image and right side */}
                     <div className={s.content_image}>
-                        <Image src="/images/640.png" fill={true}  alt="fence 3 image" />
+                        <Image src="/images/640.png" fill={true} alt="fence 3 image" />
                     </div>
                 </div>
             </div>

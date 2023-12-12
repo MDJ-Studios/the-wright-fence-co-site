@@ -1,0 +1,40 @@
+/* section parent */
+
+.section_parent {
+    width: 100%;
+    margin-bottom: 6rem;
+}
+
+/* parent div */
+
+.parent_div {
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    width: 50rem;
+}
+
+.parent_div h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+}
+
+/* child divs */
+
+.about_desc {
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+/* helper div  */
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 425px) {
+    .about_desc {
+        font-size: 2rem;
+        width: 100%;
+    }
+}
