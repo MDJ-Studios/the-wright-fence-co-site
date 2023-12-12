@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-// TODO: decide if we need to keep this ^
+
 import ServiceOffering from "@/components/main-page/service-offering/";
 import Carousel from "@/components/hero-carousel/";
 import Contact from "@/components/main-page/contact-us";
 import Layout from "@/components/Layout";
+import Reviews from "@/components/main-page/review-section";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +21,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Layout>
-                <main className={`${styles.main} ${inter.className}`}>
-                    <Carousel slides={slides} />
+                <main className={`${inter.className}`}>
+                    <Carousel slides={slides} simpleMode={0} />
                     <ServiceOffering />
+                    <Reviews />
                     <Contact />
                 </main>
             </Layout>

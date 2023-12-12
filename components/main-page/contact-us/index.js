@@ -23,7 +23,7 @@ export default function Contact() {
     };
 
     return (
-        <section className={`${s.section_contact}`}>
+        <section className={`${s.section_contact}`} id="contact">
             <h2>Contact Us</h2>
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>

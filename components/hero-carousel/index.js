@@ -3,22 +3,18 @@ import Image from "next/image";
 
 import s from "./carousel.module.css";
 
-export default function Carousel({ slides }) {
+export default function Carousel({ slides, simpleMode }) {
     const [current, setCurrent] = useState(0);
 
-    const nextSlide = () => {
-        setCurrent(current === slides.length - 1 ? 0 : current + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrent(current === 0 ? slides.length - 1 : current - 1);
-    };
+    const nextSlide = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
+    const prevSlide = () => setCurrent(current === 0 ? slides.length - 1 : current - 1);
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 3000);
-
-        return () => clearInterval(interval);
-    }, [current, slides.length]);
+        if (simpleMode !== 1) {
+            const interval = setInterval(nextSlide, 3000);
+            return () => clearInterval(interval);
+        }
+    }, [current, slides.length, simpleMode]);
 
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null;
@@ -27,20 +23,23 @@ export default function Carousel({ slides }) {
     return (
         <div className={s.section_carousel}>
             {slides.map((slide, index) => (
-                <div className={index === current ? `${s.slide_active}` : `${s.slide}`} key={index}>
+                <div className={index === current ? s.slide_active : s.slide} key={index}>
                     {index === current && (
-                        <Image src={slide.image} fill={true} style={{ objectFit: "cover" }} alt="carousel image" />
+                        <Image src={slide.image} layout="fill" objectFit="cover" alt="carousel image" />
                     )}
                 </div>
             ))}
-            <div className={s.button_parent}>
-                <button className={s.button} onClick={prevSlide}>
-                    <Image src="/images/prev.png" width={20} height={20} alt="carousel image" />
-                </button>
-                <button className={s.button} onClick={nextSlide}>
-                    <Image src="/images/next.png" width={20} height={20} alt="carousel image" />
-                </button>
-            </div>
+
+            {simpleMode !== 1 && (
+                <div className={s.button_parent}>
+                    <button className={s.button} onClick={prevSlide}>
+                        <Image src="/images/prev.png" width={20} height={20} alt="Previous" />
+                    </button>
+                    <button className={s.button} onClick={nextSlide}>
+                        <Image src="/images/next.png" width={20} height={20} alt="Next" />
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

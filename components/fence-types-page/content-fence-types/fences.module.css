@@ -1,13 +1,20 @@
 /* section parent */
 
+.section_fence {
+    width: 100%;
+    margin: 6rem auto 6rem auto;
+    max-width: max-content;
+}
+
 .section_fence h2 {
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
     font-size: 1.8rem;
 }
 /* parent div */
 
 .parent_div {
     flex-direction: column;
+    width: 50rem;
 }
 
 .parent_div p {
@@ -36,6 +43,7 @@
 }
 
 .content_text {
+    flex-direction: column;
     margin: 0 1rem 0 0;
 }
 /* helper classes */
@@ -53,10 +61,10 @@
 
 @media (max-width: 720px) {
     .flex_center {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .content_text {
-        margin: 0 0 1rem 0;
+        margin: 1rem 0 0 0;
     }
 }
 
