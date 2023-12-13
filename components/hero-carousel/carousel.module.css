@@ -10,7 +10,7 @@
 /* carousel images */
 
 .slide {
-    opacity: 0;
+    opacity: 0.5;
 }
 
 .slide_active {
