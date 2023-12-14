@@ -5,7 +5,7 @@ import Carousel from "@/components/hero-carousel";
 import AboutUs from "@/components/about-page/about-us";
 
 export default function About() {
-    const slides = [{ image: "/images/fence1.jpg" }, { image: "/images/fence2.jpg" }, { image: "/images/fence3.jpg" }];
+    const slides = [{ image: "/images/fence1.jpg" }];
     return (
         <>
             <Head>
@@ -17,7 +17,7 @@ export default function About() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel slides={slides} simpleMode={0} />
+                    <Carousel slides={slides} simpleMode={1} />
                     <AboutUs />
                 </main>
             </Layout>
