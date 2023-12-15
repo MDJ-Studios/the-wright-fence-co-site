@@ -11,7 +11,7 @@ export default function Carousel({ slides, simpleMode }) {
 
     useEffect(() => {
         if (simpleMode !== 1) {
-            const interval = setInterval(nextSlide, 3000);
+            const interval = setInterval(nextSlide, 4000);
             return () => clearInterval(interval);
         }
     }, [current, slides.length, simpleMode]);
