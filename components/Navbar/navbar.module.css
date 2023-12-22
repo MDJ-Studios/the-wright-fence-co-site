@@ -14,4 +14,5 @@
 
 .navbar > ul > li {
     margin-right: 1rem;
+    font-family: var(--brand-font);
 }
