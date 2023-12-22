@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 
@@ -7,6 +7,8 @@ export default function Layout({ children }) {
   const [isSmallerScreen, setIsSmallerScreen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(true);
   const [navOpen, setNavOpen] = useState(false);
+
+  const handleWheelCallback = useRef(null);
 
   const handleMediaQueryChange = mediaQuery => {
     if (mediaQuery.matches) {
@@ -24,6 +26,12 @@ export default function Layout({ children }) {
     }
   };
 
+  const handleWheel = (e) => {
+    if(e.deltaY >= 10) {
+      setNavOpen(false);
+    }
+  }
+
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     mediaQuery.addEventListener('change', handleMediaQueryChange);
@@ -39,6 +47,17 @@ export default function Layout({ children }) {
     handleMediaQueryChangeSmaller(mediaQuery);
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChangeSmaller);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleWheelCallback.current = handleWheel;
+  });
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheelCallback.current);
+    return () => {
+      window.removeEventListener('wheel', handleWheelCallback.current);
     };
   }, []);
 
