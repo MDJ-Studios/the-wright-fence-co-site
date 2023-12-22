@@ -11,14 +11,14 @@ const navitemStyles = {
     transition: "color 0.80s linear",
     color: "#ffffff",
     cursor: "pointer",
-    fontFamily: "Bernier, Helvetica, cursive",
+    fontFamily: "var(--brand-font)",
 };
 
 const navDrawerStyles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#663399",
     minHeight: "100vh",
     padding: "2rem",
     position: "absolute",
