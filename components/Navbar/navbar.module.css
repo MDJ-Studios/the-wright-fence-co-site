@@ -12,6 +12,10 @@
     list-style: none;
 }
 
+.navbar > a > image {
+    padding: 5rem;
+}
+
 .navbar > ul > li {
     margin-right: 1rem;
     font-family: var(--brand-font);

@@ -27,7 +27,14 @@ export default function Contact() {
             <h2>Contact Us</h2>
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>
-                    <h1>MAP</h1>
+                    <iframe 
+                        title="location" 
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtWCsngNdsOQIduF7xkjn8v4p7CSXmV6s&q=fort+worth+tx" 
+                        width="100%" 
+                        height="375" 
+                        style={{ padding: 0, margin: 0, borderTop: '1px solid #808080', border: 0 }} 
+                        loading="lazy" 
+                    />
                 </div>
                 <div className={s.form_parent}>
                     <form onSubmit={handleSubmit} className={s.form_ele}>
