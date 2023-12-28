@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import Burger from "../Burger-Menu-Button";
 import NavDrawer from "../Nav-Drawer";
@@ -53,9 +54,18 @@ export default function Navbar({
 }) {
     return (
         <nav className={styles.navbar}>
-            <h1>
+            {/* <h1>
                 <Link href="/">The Wright Fence Co</Link>
-            </h1>
+            </h1> */}
+            <Link href="/">
+                <Image
+                    src="/images/thewrightfence-logo.png"
+                    alt="The Wright Fence Co Logo"
+                    width={100}
+                    height={100}
+                    priority={true}
+                />
+            </Link>
             {isSmallScreen || isSmallerScreen ? (
                 <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
             ) : (
