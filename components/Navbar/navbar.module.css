@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3rem;
-    padding-left: 1rem;
+    padding: 40px 160px;
 }
 
 .navbar > ul {
@@ -19,4 +19,10 @@
 .navbar > ul > li {
     margin-right: 1rem;
     font-family: var(--brand-font);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 40px 40px;
+    }
 }

@@ -15,6 +15,7 @@
 /* Parent Div */
 .div_parent {
     width: 44rem;
+    height: max-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,13 +24,13 @@
 /* child divs */
 .map_parent {
     border: 2px solid white;
-    height: 20rem;
     width: 20rem;
     /* margin-right: 6rem; */
 }
 
 .form_parent {
     height: 100%;
+    align-items: center;
 }
 
 .name_parent {
@@ -46,7 +47,7 @@
 
 .message_parent {
     width: 20rem;
-    height: 8rem;
+    height: 12rem;
     margin-bottom: 1.2rem;
 }
 
