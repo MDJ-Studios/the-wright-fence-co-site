@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import s from "./contact.module.css";
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState(getResetFormData());
+
+    const getResetFormData = () => ({
         name: "",
         email: "",
         message: "",
     });
+
+    const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,8 +22,13 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setFormSubmitted(true);
+        
+        setTimeout(() => {
+            setFormSubmitted(false);
+        }, 3000);
 
-        // console.log(formData);
+        setFormData(getResetFormData());
     };
 
     return (
@@ -37,45 +46,74 @@ export default function Contact() {
                     />
                 </div>
                 <div className={s.form_parent}>
-                    <form onSubmit={handleSubmit} className={s.form_ele}>
-                        <div className={s.name_parent}>
-                            <input
-                                className={s.full}
-                                type="text"
-                                id="name"
-                                name="name"
-                                placeholder="John Wick"
-                                value={formData.name}
-                                onChange={handleChange}
+                    {!formSubmitted ? (
+                        <form 
+                            onSubmit={handleSubmit} 
+                            className={s.form_ele} 
+                            data-netlify="true"
+                            method="POST"
+                            action="/"
+                        >
+                            <input 
+                                type="hidden" 
+                                name="form-name" 
+                                value="Contact Form" 
                             />
+                            <div className={s.name_parent}>
+                                <input
+                                    className={s.full}
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="John Wick"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    />
+                            </div>
+                            <div className={s.email_parent}>
+                                <input
+                                    className={s.full}
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="babayaga@email.com"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    />
+                            </div>
+                            <div className={s.message_parent}>
+                                <textarea
+                                    className={s.full}
+                                    id="message"
+                                    name="message"
+                                    placeholder="Why did you have to kill my dog (⌣̩̩́_⌣̩̩̀)"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    />
+                            </div>
+                            <button type="submit" className={s.submit}>
+                                Submit
+                            </button>
+                        </form>
+                    ) : (
+                        <div>
+                            <h3>Thank you for your submission!</h3>
+                            <p>We will get back to you as soon as possible.</p>
                         </div>
-                        <div className={s.email_parent}>
-                            <input
-                                className={s.full}
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="babayaga@email.com"
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <div className={s.message_parent}>
-                            <textarea
-                                className={s.full}
-                                id="message"
-                                name="message"
-                                placeholder="Why did you have to kill my dog (⌣̩̩́_⌣̩̩̀)"
-                                value={formData.message}
-                                onChange={handleChange}
-                            />
-                        </div>
-                        <button type="submit" className={s.submit}>
-                            Submit
-                        </button>
-                    </form>
+                    )}
                 </div>
             </div>
         </section>
     );
 }
+
+export async function getStaticProps() {
+    const message = `This page has been pre-rendered using getStaticProps!
+    We needed to do this so that Netlify can pre-render the page at build time and see the contact form`;
+    // Leaving this here for now until we can find a more effiecient way to do this. 
+    return {
+      props: {
+        message,
+      },
+    };
+  }
