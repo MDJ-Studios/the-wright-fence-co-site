@@ -13,7 +13,7 @@ export default function Contact() {
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const encode = ({name, email, message}) => {
-        return `form-name=Contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+        return `form-name=contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
     }
 
     const handleChange = (e) => {
@@ -33,7 +33,7 @@ export default function Contact() {
             headers: {
                 'Content-type': 'application/x-www-form-urlencoded'
             },
-            body: encode(state)
+            body: encode(formData)
         })
         
         setTimeout(() => {
@@ -67,7 +67,7 @@ export default function Contact() {
                             <input 
                                 type="hidden" 
                                 name="form-name" 
-                                value="Contact" 
+                                value="contact" 
                             />
                             <div className={s.name_parent}>
                                 <input
