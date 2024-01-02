@@ -15,8 +15,7 @@ export default function Reviews() {
                         <p>
                             God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man
                             creates Dinosaurs. My dad once told me, laugh and the world laughs with you, Cry, and I'll
-                            give you something to cry about you little bastard! Must go faster. Yeah, but John, if The
-                            Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
+                            give you something to cry about you little bastard!
                         </p>
                     </div>
                     {/* title */}
@@ -30,8 +29,7 @@ export default function Reviews() {
                         <p>
                             God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man
                             creates Dinosaurs. My dad once told me, laugh and the world laughs with you, Cry, and I'll
-                            give you something to cry about you little bastard! Must go faster. Yeah, but John, if The
-                            Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
+                            give you something to cry about you little bastard!
                         </p>
                     </div>
                 </div>
@@ -44,8 +42,7 @@ export default function Reviews() {
                         <p>
                             God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man
                             creates Dinosaurs. My dad once told me, laugh and the world laughs with you, Cry, and I'll
-                            give you something to cry about you little bastard! Must go faster. Yeah, but John, if The
-                            Pirates of the Caribbean breaks down, the pirates don’t eat the tourists.
+                            give you something to cry about you little bastard!
                         </p>
                     </div>
                 </div>
