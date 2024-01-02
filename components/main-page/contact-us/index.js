@@ -63,6 +63,7 @@ export default function Contact() {
                             onSubmit={handleSubmit} 
                             className={s.form_ele} 
                             data-netlify="true"
+                            name="contact"
                         >
                             <input 
                                 type="hidden" 
