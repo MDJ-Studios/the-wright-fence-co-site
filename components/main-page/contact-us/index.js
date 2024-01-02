@@ -75,7 +75,7 @@ export default function Contact() {
                                     type="text"
                                     id="name"
                                     name="name"
-                                    placeholder="John Wick"
+                                    placeholder="Mr. Smith"
                                     value={formData.name}
                                     onChange={handleChange}
                                     />
@@ -86,7 +86,7 @@ export default function Contact() {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    placeholder="babayaga@email.com"
+                                    placeholder="m.smith@gmail.com"
                                     value={formData.email}
                                     onChange={handleChange}
                                     />
@@ -96,7 +96,7 @@ export default function Contact() {
                                     className={s.full}
                                     id="message"
                                     name="message"
-                                    placeholder="Why did you have to kill my dog (⌣̩̩́_⌣̩̩̀)"
+                                    placeholder="Hi there, I'm interested in a quote for a new fence."
                                     value={formData.message}
                                     onChange={handleChange}
                                     />
