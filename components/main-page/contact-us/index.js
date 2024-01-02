@@ -12,6 +12,10 @@ export default function Contact() {
     const [formData, setFormData] = useState(getResetFormData());
     const [formSubmitted, setFormSubmitted] = useState(false);
 
+    const encode = ({name, email, message}) => {
+        return `form-name=Contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+    }
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({
@@ -20,9 +24,17 @@ export default function Contact() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setFormSubmitted(true);
+
+        await fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/x-www-form-urlencoded'
+            },
+            body: encode(state)
+        })
         
         setTimeout(() => {
             setFormSubmitted(false);
@@ -51,13 +63,11 @@ export default function Contact() {
                             onSubmit={handleSubmit} 
                             className={s.form_ele} 
                             data-netlify="true"
-                            method="POST"
-                            action="/"
                         >
                             <input 
                                 type="hidden" 
                                 name="form-name" 
-                                value="Contact Form" 
+                                value="Contact" 
                             />
                             <div className={s.name_parent}>
                                 <input
