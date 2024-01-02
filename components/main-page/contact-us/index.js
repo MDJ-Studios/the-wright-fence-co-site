@@ -118,13 +118,13 @@ export default function Contact() {
 }
 
 
-export async function getStaticProps() {
-    const message = `This page has been pre-rendered using getStaticProps!
-    We needed to do this so that Netlify can pre-render the page at build time and see the contact form`;
-    // Leaving this here for now until we can find a more effiecient way to do this. 
-    return {
-      props: {
-        message,
-      },
-    };
-  }
+// export async function getStaticProps() {
+//     const message = `This page has been pre-rendered using getStaticProps!
+//     We needed to do this so that Netlify can pre-render the page at build time and see the contact form`;
+//     // Leaving this here for now until we can find a more effiecient way to do this. 
+//     return {
+//       props: {
+//         message,
+//       },
+//     };
+//   }
