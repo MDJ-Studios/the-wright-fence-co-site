@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import s from "./contact.module.css";
 
 export default function Contact() {
-    const [formData, setFormData] = useState(getResetFormData());
-
+    
     const getResetFormData = () => ({
         name: "",
         email: "",
         message: "",
     });
 
+    const [formData, setFormData] = useState(getResetFormData());
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleChange = (e) => {
