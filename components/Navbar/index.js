@@ -59,7 +59,7 @@ export default function Navbar({
             </h1> */}
             <Link href="/">
                 <Image
-                    src="/images/white_logo.svg"
+                    src="/images/logo_white.svg"
                     alt="The Wright Fence Co Logo"
                     width={70}
                     height={70}

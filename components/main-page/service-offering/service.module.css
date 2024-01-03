@@ -10,7 +10,8 @@
 /* child divs */
 
 .content_container {
-    width: 16rem;
+    width: 18rem;
+    height: 30rem;
     margin: 0 3rem 0 3rem;
     flex-direction: column;
 }
@@ -22,7 +23,7 @@
 .content_image {
     position: relative;
     width: 100%;
-    height: 11rem;
+    height: 16rem;
     margin-bottom: 1.5rem;
 }
 
@@ -39,7 +40,8 @@
 }
 
 .content_text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    height: 10rem;
 }
 
 /* helper div  */
@@ -54,10 +56,10 @@
 
 /* mobile css */
 
-@media (max-width: 970px) {
+@media (max-width: 1470px) {
     .parent_container {
         height: max-content;
-        width: max-content;
+        width: 65rem;
         flex-flow: row wrap;
     }
 

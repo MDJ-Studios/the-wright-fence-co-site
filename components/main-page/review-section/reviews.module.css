@@ -64,6 +64,7 @@
     .parent_container {
         height: max-content;
         flex-flow: row wrap;
+        width: 40rem;
     }
 
     .content_container {

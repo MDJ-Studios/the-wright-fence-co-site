@@ -10,7 +10,11 @@ import Reviews from "@/components/main-page/review-section";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    const slides = [{ image: "/images/fence1.jpg" }, { image: "/images/fence2.jpg" }, { image: "/images/fence3.jpg" }];
+    const slides = [
+        { image: "/images/carousel_images/c1.png" },
+        { image: "/images/carousel_images/c2.png" },
+        { image: "/images/carousel_images/c3.png" },
+    ];
     return (
         <>
             <Head>
