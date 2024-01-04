@@ -70,7 +70,7 @@ export default function Navbar({
                 <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
             ) : (
                 <ul>
-                    <NavLink linkText="About Us" path="/about" isScrollLink={false} />
+                    <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
                     <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
                     <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
                     <NavLink linkText="Services" path="#services" isScrollLink={true} />
