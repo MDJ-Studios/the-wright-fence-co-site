@@ -71,7 +71,7 @@ export default function Navbar({
             ) : (
                 <ul>
                     <NavLink linkText="About Us" path="/about" isScrollLink={false} />
-                    <NavLink linkText="Fence Types" path="/fence-types" isScrollLink={false} />
+                    <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
                     <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
                     <NavLink linkText="Services" path="#services" isScrollLink={true} />
                     <li><small>Call Us: <a href="tel:1-682-260-9080">(682)<br />260-9080</a></small></li>
