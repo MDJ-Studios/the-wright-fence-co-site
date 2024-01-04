@@ -13,8 +13,9 @@
     list-style: none;
 }
 
-.navbar > a > image {
-    padding: 5rem;
+.navbar img {
+    -webkit-filter: drop-shadow(3px 7px 21px var(--accent));
+    filter: drop-shadow(3px 7px 21px var(--accent));
 }
 
 .navbar > ul > li {
