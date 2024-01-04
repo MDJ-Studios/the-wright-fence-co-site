@@ -93,11 +93,11 @@ p {
     font-family: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
-}
+} */
 
 .burger {
     display: none;
@@ -125,10 +125,10 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1376px) {
     .burger {
         margin: 0 20px 0 0.5rem;
-        color: #ffffff;
+        color: var(--background);
         display: block;
     }
 
@@ -137,12 +137,13 @@ p {
     }
 
     .burger div {
-        width: 2rem;
-        height: 0.25rem;
-        background: #000;
+        width: 3.6rem;
+        height: 0.50rem;
+        margin-top: .65rem;
+        background: var(--background);
         border-radius: 10px;
         transition: all 0.3s linear;
-        transform-origin: 0.65rem;
+        transform-origin: 0.22rem;
         transform: rotate(0);
     }
 }

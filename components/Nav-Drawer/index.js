@@ -2,23 +2,23 @@ import React from "react";
 import Link from "next/link";
 
 const navitemStyles = {
-    fontSize: "1.7rem",
+    fontSize: "3rem",
     textTransform: "uppercase",
     padding: "1.5rem",
     fontWeight: "bold",
     letterSpacing: "0.5rem",
     textDecoration: "none",
     transition: "color 0.80s linear",
-    color: "#ffffff",
+    color: "var(--background)",
     cursor: "pointer",
-    fontFamily: "var(--brand-font)",
+    fontFamily: "var(--font-sans)",
 };
 
 const navDrawerStyles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "#663399",
+    backgroundColor: "var(--primary)",
     minHeight: "100vh",
     padding: "2rem",
     position: "absolute",

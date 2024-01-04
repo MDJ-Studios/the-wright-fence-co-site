@@ -51,3 +51,46 @@
     border: 2px solid rgb(190, 190, 190);
     border-radius: 20%;
 }
+
+/* heading and subheading */
+
+.caption {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: var(--background); 
+    width: 80%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 2rem; 
+}
+
+.caption h2 {
+    font-size: 4rem; 
+    margin-bottom: 0.5rem;
+}
+
+.caption p {
+    font-size: 1.5rem; 
+}
+
+/* cta button */
+
+.ctaButton {
+    margin-top: 2rem; 
+    padding: 10px 20px;
+    font-size: 1rem; 
+    font-family: var(--font-sans);
+    color: var(--background); 
+    background-color: var(--primary); 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.ctaButton:hover {
+    background-color: #4a1fa7;
+}

@@ -11,7 +11,7 @@ function NavLink({ linkText, path, isScrollLink }) {
     const isActive = (pathname) => (router ? router.pathname === pathname : false);
 
     const linkStyles = {
-        borderBottom: isActive(path) ? "2px solid #000" : "none",
+        borderBottom: isActive(path) ? "2px solid #fff" : "none",
         cursor: "pointer",
     };
 
@@ -61,8 +61,8 @@ export default function Navbar({
                 <Image
                     src="/images/logo_white.svg"
                     alt="The Wright Fence Co Logo"
-                    width={70}
-                    height={70}
+                    width={150}
+                    height={150}
                     priority={true}
                 />
             </Link>
@@ -74,6 +74,7 @@ export default function Navbar({
                     <NavLink linkText="Fence Types" path="/fence-types" isScrollLink={false} />
                     <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
                     <NavLink linkText="Services" path="#services" isScrollLink={true} />
+                    <li><small>Call Us: <a href="tel:1-682-260-9080">(682)<br />260-9080</a></small></li>
                 </ul>
             )}
             {navOpen && (

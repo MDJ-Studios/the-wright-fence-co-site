@@ -23,7 +23,7 @@
 
 /* child divs */
 .map_parent {
-    border: 2px solid white;
+    border: 2px solid var(--background);
     width: 20rem;
     /* margin-right: 6rem; */
 }
@@ -54,8 +54,11 @@
 .submit {
     width: 100%;
     height: 2.5rem;
-    background-color: #000;
-    color: white;
+    background-color: var(--primary);
+    color: var(--background);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.2rem;
     border: none;
     border-radius: 2px;
     cursor: pointer;
