@@ -5,3 +5,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.footer p:last-of-type {
+    cursor: pointer;
+}

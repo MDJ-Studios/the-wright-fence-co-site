@@ -1,4 +1,5 @@
 import styles from "./footer.module.css";
+import handleScroll from "@/utils/handleScroll";
 
 export default function Footer() {
     return (
@@ -11,8 +12,7 @@ export default function Footer() {
             <section>
                 {/* TODO: Add social media icon/links here */}
             </section>
-            <p>
-                {/* TODO: add a scrollspy link to scroll to top of page */}
+            <p onClick={() => handleScroll("top")}>
                 Back to Top
             </p>
         </footer>
