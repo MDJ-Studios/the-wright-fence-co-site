@@ -2,19 +2,20 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 
 import ServiceOffering from "@/components/main-page/service-offering/";
-import Carousel from "@/components/hero-carousel/";
+// import Carousel from "@/components/hero-carousel/";
 import Contact from "@/components/main-page/contact-us";
 import Layout from "@/components/Layout";
 import Reviews from "@/components/main-page/review-section";
+import CustomSlider from "@/components/carousel";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    const slides = [
-        { image: "/images/carousel_images/c1.png" },
-        { image: "/images/carousel_images/c2.png" },
-        { image: "/images/carousel_images/c3.png" },
-    ];
+    // const slides = [
+    //     { image: "/images/carousel_images/c1.png" },
+    //     { image: "/images/carousel_images/c2.png" },
+    //     { image: "/images/carousel_images/c3.png" },
+    // ];
     return (
         <>
             <Head>
@@ -26,7 +27,8 @@ export default function Home() {
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel slides={slides} simpleMode={0} />
+                    {/* <Carousel slides={slides} simpleMode={0} /> */}
+                    <CustomSlider />
                     <ServiceOffering />
                     <Reviews />
                     <Contact />
