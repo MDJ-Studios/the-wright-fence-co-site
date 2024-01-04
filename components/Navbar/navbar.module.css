@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 10rem;
-    padding: 40px 160px;
+    padding: 40px 100px;
     background-color: var(--primary);
 }
 
@@ -19,9 +19,10 @@
 
 .navbar > ul > li {
     margin-right: 1.9rem;
-    font-size: 4vmin;
+    font-size: 2.58vmax;
     font-family: var(--font-sans);
-    color: var(--background);   
+    color: var(--background);
+    word-wrap: normal;
 }
 
 .navbar > ul > li:last-of-type{
