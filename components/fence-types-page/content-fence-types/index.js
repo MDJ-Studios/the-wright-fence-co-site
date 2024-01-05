@@ -3,7 +3,7 @@ import s from "./fences.module.css";
 
 export default function SectionFenceTypes() {
     return (
-        <section className={s.section_fence}>
+        <section className={s.section_fence} id="gallery">
             <h2>Fence Types We Offer</h2>
             {/* parent div */}
             <div className={`${s.parent_div} ${s.flex_center}`}>

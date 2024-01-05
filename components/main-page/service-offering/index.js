@@ -3,8 +3,9 @@ import s from "./service.module.css";
 
 export default function ServiceOffering() {
     return (
-        <section className={`${s.section_service} ${s.flex} ${s.flex_wrap}`} id="services">
+        <section className={`${s.section_service} ${s.flex}`} id="services">
             {/* parent container */}
+            <h2>Services We Offer</h2>
             <div className={`${s.parent_container} ${s.flex}`}>
                 {/* container 1 */}
                 <div className={`${s.content_container} ${s.flex}`}>

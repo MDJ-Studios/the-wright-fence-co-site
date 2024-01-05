@@ -2,27 +2,27 @@
 
 .section_parent {
     width: 100%;
-    margin: 136px 0;
+    margin: 5rem 0;
 }
 
 /* parent div */
 
 .parent_div {
     display: flex;
-    padding: 3rem;
+    padding: 0 3rem;
     flex-direction: column;
     width: 50rem;
 }
 
 .parent_div h2 {
-    font-size: 2.8rem;
-    margin-bottom: 2rem;
+    font-size: 4vmax;
+    margin-bottom: 2.5rem;
 }
 
 /* child divs */
 
 .about_desc {
-    font-size: 2.5rem;
+    font-size: 2.5vmax;
     width: 100%;
 }
 

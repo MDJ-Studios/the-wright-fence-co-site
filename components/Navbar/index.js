@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import Burger from "../Burger-Menu-Button";
 import NavDrawer from "../Nav-Drawer";
 import styles from "./navbar.module.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavLink({ linkText, path, isScrollLink }) {
     const router = useRouter();
@@ -70,11 +72,11 @@ export default function Navbar({
                 <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
             ) : (
                 <ul>
-                    <NavLink linkText="About Us" path="/about" isScrollLink={false} />
-                    <NavLink linkText="Fence Types" path="/fence-types" isScrollLink={false} />
+                    <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
+                    <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
                     <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
                     <NavLink linkText="Services" path="#services" isScrollLink={true} />
-                    <li><small>Call Us: <a href="tel:1-682-260-9080">(682)<br />260-9080</a></small></li>
+                    <li><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
                 </ul>
             )}
             {navOpen && (
