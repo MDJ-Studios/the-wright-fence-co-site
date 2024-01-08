@@ -33,7 +33,7 @@ export default function Layout({ children }) {
   }
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 1176px)");
     mediaQuery.addEventListener('change', handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
     return () => {
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 1176px)");
     mediaQuery.addEventListener('change', handleMediaQueryChangeSmaller);
     handleMediaQueryChangeSmaller(mediaQuery);
     return () => {

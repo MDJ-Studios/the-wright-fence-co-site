@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import Burger from "../Burger-Menu-Button";
 import NavDrawer from "../Nav-Drawer";
 import styles from "./navbar.module.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function NavLink({ linkText, path, isScrollLink }) {
     const router = useRouter();
@@ -11,7 +13,7 @@ function NavLink({ linkText, path, isScrollLink }) {
     const isActive = (pathname) => (router ? router.pathname === pathname : false);
 
     const linkStyles = {
-        borderBottom: isActive(path) ? "2px solid #000" : "none",
+        borderBottom: isActive(path) ? "2px solid #fff" : "none",
         cursor: "pointer",
     };
 
@@ -61,8 +63,8 @@ export default function Navbar({
                 <Image
                     src="/images/logo_white.svg"
                     alt="The Wright Fence Co Logo"
-                    width={70}
-                    height={70}
+                    width={150}
+                    height={150}
                     priority={true}
                 />
             </Link>
@@ -70,10 +72,11 @@ export default function Navbar({
                 <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
             ) : (
                 <ul>
-                    <NavLink linkText="About Us" path="/about" isScrollLink={false} />
-                    <NavLink linkText="Fence Types" path="/fence-types" isScrollLink={false} />
+                    <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
+                    <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
                     <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
                     <NavLink linkText="Services" path="#services" isScrollLink={true} />
+                    <li><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
                 </ul>
             )}
             {navOpen && (

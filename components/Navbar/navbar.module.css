@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
-    padding: 40px 160px;
+    height: 10rem;
+    padding: 40px 100px;
+    background-color: var(--primary);
 }
 
 .navbar > ul {
@@ -12,13 +13,23 @@
     list-style: none;
 }
 
-.navbar > a > image {
-    padding: 5rem;
+.navbar img {
+    -webkit-filter: drop-shadow(3px 7px 21px var(--secondary));
+    filter: drop-shadow(3px 7px 21px var(--secondary));
 }
 
 .navbar > ul > li {
-    margin-right: 1rem;
-    font-family: var(--brand-font);
+    margin-right: 1.9rem;
+    font-size: 2.58vmax;
+    font-family: var(--font-sans);
+    color: var(--background);
+    word-wrap: normal;
+    text-shadow: 3px 7px 21px var(--secondary);
+}
+
+.navbar > ul > li:last-of-type{
+    font-size: 1.5rem;
+    text-shadow: 3px 7px 21px var(--secondary)
 }
 
 @media (max-width: 768px) {

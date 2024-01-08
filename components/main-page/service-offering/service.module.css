@@ -2,7 +2,15 @@
 
 .section_service {
     width: 100%;
-    margin: 136px 0;
+    margin: 6rem 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_service h2 {
+    font-size: 3vmax;
+    font-weight: bold;
+    margin-bottom: 3rem;
 }
 
 /* parent container */

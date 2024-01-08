@@ -13,7 +13,7 @@ export default function Burger ({ navOpen, setNavOpen }) {
             <div 
                 style={{
                     transform: navOpen ? 'rotate(45deg)' : 'rotate(0)',
-                    backgroundColor: navOpen ? '#fff' : '#000',
+                    backgroundColor: 'var(--background)',
                     marginBottom: navOpen ? '0' : '5px',
                 }} 
                 />
@@ -21,14 +21,14 @@ export default function Burger ({ navOpen, setNavOpen }) {
                 style={{
                     transform: navOpen ? 'translateX(20px)' : 'translateX(0)',
                     opacity: navOpen ? 0 : 1,
-                    backgroundColor: navOpen ? '#fff' : '#000',
+                    backgroundColor: 'var(--background)',
                     marginBottom: navOpen ? '0' : '5px',
                 }} 
                 />
             <div 
                 style={{
                     transform: navOpen ? 'rotate(-45deg)' : 'rotate(0)',
-                    backgroundColor: navOpen ? '#fff' : '#000',
+                    backgroundColor: 'var(--background)',
                     marginBottom: navOpen ? '0' : '5px',
                 }} 
                 />

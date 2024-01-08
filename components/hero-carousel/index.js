@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import handleScroll from "@/utils/handleScroll";
 
 import s from "./carousel.module.css";
 
@@ -25,7 +26,14 @@ export default function Carousel({ slides, simpleMode }) {
             {slides.map((slide, index) => (
                 <div className={index === current ? s.slide_active : s.slide} key={index}>
                     {index === current && (
-                        <Image src={slide.image} layout="fill" objectFit="cover" alt="carousel image" />
+                        <>
+                            <Image src={slide.image} layout="fill" objectFit="cover" alt="carousel image" />
+                            <div className={s.caption}>
+                                <h2> Crafting More Than Fences, <br />We Build Lasting Connections</h2> {/* Heading */}
+                                <p>Secure Your Space with a Touch of Family Warmth and Craftsmanship</p> {/* Subheading */}
+                                <button className={s.ctaButton} onClick={() => handleScroll("services")}>Learn More</button> {/* CTA Button */}
+                            </div>
+                        </>
                     )}
                 </div>
             ))}

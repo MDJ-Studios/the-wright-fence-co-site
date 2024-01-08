@@ -3,14 +3,15 @@ import s from "./service.module.css";
 
 export default function ServiceOffering() {
     return (
-        <section className={`${s.section_service} ${s.flex} ${s.flex_wrap}`} id="services">
+        <section className={`${s.section_service} ${s.flex}`} id="services">
             {/* parent container */}
+            <h2>Services We Offer</h2>
             <div className={`${s.parent_container} ${s.flex}`}>
                 {/* container 1 */}
                 <div className={`${s.content_container} ${s.flex}`}>
                     {/* image */}
                     <div className={s.content_image}>
-                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
+                        <Image src="/images/services-fences.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
                     </div>
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>
@@ -28,7 +29,7 @@ export default function ServiceOffering() {
                 <div className={`${s.content_container} ${s.flex}`}>
                     {/* image */}
                     <div className={s.content_image}>
-                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
+                        <Image src="/images/services-decks.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
                     </div>
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>
@@ -46,7 +47,7 @@ export default function ServiceOffering() {
                 <div className={`${s.content_container} ${s.flex}`}>
                     {/* image */}
                     <div className={s.content_image}>
-                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
+                        <Image src="/images/services-patio-covers.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
                     </div>
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>
@@ -64,7 +65,7 @@ export default function ServiceOffering() {
                 <div className={`${s.content_container} ${s.flex}`}>
                     {/* image */}
                     <div className={s.content_image}>
-                        <Image src="/images/640.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
+                        <Image src="/images/services-staining.png" fill={true} style={{ objectFit: "cover" }} alt="service image" />
                     </div>
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>

@@ -34,36 +34,12 @@
     --callout-border-rgb: 172, 175, 176;
     --card-rgb: 180, 185, 188;
     --card-border-rgb: 131, 134, 135;
+
     --text: #000000;
     --background: #fcfcfd;
     --primary: #632ed4;
     --secondary: #545050;
     --accent: #9c9897;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-
-        --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-        --secondary-glow: linear-gradient(
-            to bottom right,
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0),
-            rgba(1, 65, 255, 0.3)
-        );
-
-        --tile-start-rgb: 2, 13, 46;
-        --tile-end-rgb: 2, 5, 19;
-        --tile-border: conic-gradient(#ffffff80, #ffffff40, #ffffff30, #ffffff20, #ffffff10, #ffffff10, #ffffff80);
-
-        --callout-rgb: 20, 20, 20;
-        --callout-border-rgb: 108, 108, 108;
-        --card-rgb: 100, 100, 100;
-        --card-border-rgb: 200, 200, 200;
-    }
 }
   
 
@@ -93,11 +69,6 @@ p {
     font-family: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-}
 
 .burger {
     display: none;
@@ -125,10 +96,10 @@ p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1176px) {
     .burger {
         margin: 0 20px 0 0.5rem;
-        color: #ffffff;
+        color: var(--background);
         display: block;
     }
 
@@ -137,12 +108,47 @@ p {
     }
 
     .burger div {
-        width: 2rem;
-        height: 0.25rem;
-        background: #000;
+        width: 3.6rem;
+        height: 0.50rem;
+        margin-top: .65rem;
+        background: var(--background);
         border-radius: 10px;
         transition: all 0.3s linear;
-        transform-origin: 0.65rem;
+        transform-origin: 0.22rem;
         transform: rotate(0);
     }
 }
+
+
+/* 
+TODO: Dark Mode Styles - Savings these for a version two
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+
+        --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+        --secondary-glow: linear-gradient(
+            to bottom right,
+            rgba(1, 65, 255, 0),
+            rgba(1, 65, 255, 0),
+            rgba(1, 65, 255, 0.3)
+        );
+
+        --tile-start-rgb: 2, 13, 46;
+        --tile-end-rgb: 2, 5, 19;
+        --tile-border: conic-gradient(#ffffff80, #ffffff40, #ffffff30, #ffffff20, #ffffff10, #ffffff10, #ffffff80);
+
+        --callout-rgb: 20, 20, 20;
+        --callout-border-rgb: 108, 108, 108;
+        --card-rgb: 100, 100, 100;
+        --card-border-rgb: 200, 200, 200;
+    }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+} */
