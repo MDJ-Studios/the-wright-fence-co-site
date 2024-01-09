@@ -18,7 +18,7 @@ const navDrawerStyles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "var(--primary)",
+    backgroundColor: "#000",
     minHeight: "100vh",
     padding: "2rem",
     position: "absolute",
