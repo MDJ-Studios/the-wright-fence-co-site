@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 
-import Carousel from "@/components/hero-carousel";
+import HeroBanner from "@/components/hero-banner";
 import AboutUs from "@/components/about-page/about-us";
 
 export default function About() {
@@ -17,7 +17,13 @@ export default function About() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel slides={slides} simpleMode={1} />
+                    <HeroBanner 
+                        image="/images/family.jpg" 
+                        heading={`Crafting More Than Fences\nWe Build Trust`}
+                        subheading="Join Us in Creating Secure Homes and Enduring Bonds"
+                        ctaText="Our Story"
+                        ctaLink="about-us" 
+                    />
                     <AboutUs />
                 </main>
             </Layout>

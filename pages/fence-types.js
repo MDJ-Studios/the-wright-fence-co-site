@@ -1,11 +1,21 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 
-import Carousel from "@/components/hero-carousel";
+import FenceCarousel from "@/components/fence-carousel";
 import SectionFenceTypes from "@/components/fence-types-page/content-fence-types";
+import Carousel from "@/components/hero-carousel";
 
 export default function FenceTypes() {
-    const slides = [{ image: "/images/fence1.jpg" }];
+    const slides = [
+        { image: "/images/board-on-board-with-top-cap-and-trim.png" },
+        { image: "/images/board-on-board.png" },
+        { image: "/images/chain-link.png" },
+        { image: "/images/decks.png" },
+        { image: "/images/pipe-fence.png" },
+        { image: "/images/pre-stained-cedar.png" },
+        { image: "/images/side-by-side.png" },
+        { image: "/images/wrought-iron.png" }
+    ];
     return (
         <>
             <Head>
@@ -17,7 +27,14 @@ export default function FenceTypes() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel slides={slides} simpleMode={1} />
+                    <Carousel 
+                        slides={slides} 
+                        simpleMode={0}  
+                        heading="Elevate Your Space with Elegant Boundaries"
+                        subheading="Discover the Perfect Blend of Privacy, Style, and Durability"
+                        ctaText="See Our Available Fence Types"
+                        ctaLink="gallery"
+                    />
                     <SectionFenceTypes />
                 </main>
             </Layout>

@@ -2,7 +2,7 @@ import s from "./about.module.css";
 
 export default function AboutUs() {
     return (
-        <section className={`${s.section_parent} ${s.flex}`}>
+        <section className={`${s.section_parent} ${s.flex}`} id="about-us">
             <div className={s.parent_div} id="content">
                 <h2>We build the foundation for secure homes and lasting relationships</h2>
                 <p className={s.about_desc}>

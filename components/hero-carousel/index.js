@@ -4,7 +4,7 @@ import handleScroll from "@/utils/handleScroll";
 
 import s from "./carousel.module.css";
 
-export default function Carousel({ slides, simpleMode }) {
+export default function Carousel({ slides, simpleMode, heading, subheading, ctaText, ctaLink }) {
     const [current, setCurrent] = useState(0);
 
     const nextSlide = () => setCurrent(current === slides.length - 1 ? 0 : current + 1);
@@ -29,9 +29,9 @@ export default function Carousel({ slides, simpleMode }) {
                         <>
                             <Image src={slide.image} layout="fill" objectFit="cover" alt="carousel image" />
                             <div className={s.caption}>
-                                <h2> Crafting More Than Fences, <br />We Build Lasting Connections</h2> {/* Heading */}
-                                <p>Secure Your Space with a Touch of Family Warmth and Craftsmanship</p> {/* Subheading */}
-                                <button className={s.ctaButton} onClick={() => handleScroll("services")}>Learn More</button> {/* CTA Button */}
+                                <h2>{heading}</h2>
+                                <p>{subheading}</p>
+                                <button className={s.ctaButton} onClick={() => handleScroll(ctaLink)}>{ctaText}</button> {/* CTA Button */}
                             </div>
                         </>
                     )}
