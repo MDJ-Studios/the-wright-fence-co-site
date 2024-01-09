@@ -47,19 +47,19 @@ const links = [
     },
 ];
 
-export default function NavDrawer({ navOpen, setNavOpen, isSmallScreen }) {
+export default function NavDrawer({ isNavOpen, setNavOpen, isMobileScreen }) {
     return (
         <nav
             className="drawer"
             style={{
-                transform: navOpen && isSmallScreen ? "translateX(0)" : "translateX(-1000%)",
-                width: isSmallScreen && "100%",
-                textAlign: isSmallScreen ? "center" : "left",
+                transform: isNavOpen && isMobileScreen ? "translateX(0)" : "translateX(-1000%)",
+                width: isMobileScreen && "100%",
+                textAlign: isMobileScreen ? "center" : "left",
                 ...navDrawerStyles,
             }}
         >
             {links.map((link, idx) => (
-                <Link key={idx} onClick={() => setNavOpen(!navOpen)} style={navitemStyles} href={link.slug}>
+                <Link key={idx} onClick={() => setNavOpen(!isNavOpen)} style={navitemStyles} href={link.slug}>
                     {link.text}
                 </Link>
             ))}

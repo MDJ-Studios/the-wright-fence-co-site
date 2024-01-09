@@ -47,27 +47,25 @@ function NavLink({ linkText, path, isScrollLink }) {
 }
 
 export default function Navbar({
-    isSmallScreen,
-    setIsSmallScreen,
-    isSmallerScreen,
+    isMobileScreen,
     setNavOpen,
-    navOpen,
+    isNavOpen,
 }) {
     return (
         <>
             <nav className={styles.navbar}>
-                {isSmallScreen || isSmallerScreen ? (
+                {isMobileScreen ? (
                     <>
                         <Link href="/">
                             <Image
                                 src="/images/logo.svg"
                                 alt="The Wright Fence Co Logo"
-                                width={isSmallScreen ? 90 : 150}
-                                height={isSmallScreen ? 90 : 150}
+                                width={isMobileScreen ? 90 : 150}
+                                height={isMobileScreen ? 90 : 150}
                                 priority={true}
                             />
                         </Link>
-                        <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
+                        <Burger isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
                     </>
                 ) : (
                     <>
@@ -79,8 +77,8 @@ export default function Navbar({
                             <Image
                                 src="/images/logo.svg"
                                 alt="The Wright Fence Co Logo"
-                                width={isSmallScreen ? 90 : 150}
-                                height={isSmallScreen ? 90 : 150}
+                                width={isMobileScreen ? 90 : 150}
+                                height={isMobileScreen ? 90 : 150}
                                 priority={true}
                             />
                         </Link>
@@ -91,16 +89,15 @@ export default function Navbar({
                         </ul>
                     </>
                 )}
-                {navOpen && (
+                {isNavOpen && (
                     <NavDrawer
-                        isSmallScreen={isSmallScreen}
-                        setIsSmallScreen={setIsSmallScreen}
+                        isMobileScreen={isMobileScreen}
                         setNavOpen={setNavOpen}
-                        navOpen={navOpen}
+                        isNavOpen={isNavOpen}
                     />
                 )}
             </nav>
-            {isSmallScreen && (
+            {isMobileScreen && (
                 <div className={styles.mobileCallButtonContainer}>
                     <a className={styles.mobileCallButton} href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682) 260-9080</a>
                 </div>
