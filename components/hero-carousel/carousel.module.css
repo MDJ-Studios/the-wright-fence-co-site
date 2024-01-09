@@ -59,7 +59,7 @@
 .caption {
     position: absolute;
     z-index: 2;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -95,4 +95,14 @@
 
 .ctaButton:hover {
     background-color: #4a1fa7;
+}
+
+/* responsive design */
+
+@media (max-width: 768px) {
+    .section_carousel {
+        height: 600px;
+        border-left: 2px solid #808080;
+        border-right: 2px solid #808080;
+    }
 }

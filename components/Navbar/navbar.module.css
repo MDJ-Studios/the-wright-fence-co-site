@@ -38,5 +38,8 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 1.5rem 1.5rem;
+        border-top: #808080 3px solid;
+        border-left: #808080 3px solid;
+        border-right: #808080 3px solid;
     }
 }

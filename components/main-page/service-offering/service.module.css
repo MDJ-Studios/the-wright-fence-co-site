@@ -8,11 +8,9 @@
     background-color: var(--background);
     /* color: var(--background); */
     color: black;
-    border-left: 10px solid #808080;
-    border-right: 10px solid #808080;
+    /* border-left: 10px solid #808080; */
+    /* border-right: 10px solid #808080; */
     padding: 3rem 0 3rem 0;
-
-
 }
 
 .section_services h2 {
