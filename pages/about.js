@@ -19,7 +19,12 @@ export default function About() {
                 <main>
                     <HeroBanner 
                         image="/images/family.jpg" 
-                        heading={`Crafting More Than Fences\nWe Build Trust`}
+                        heading={
+                            <>
+                                Crafting More Than Fences <br />
+                                We Build Trust
+                            </>
+                        }   
                         subheading="Join Us in Creating Secure Homes and Enduring Bonds"
                         ctaText="Our Story"
                         ctaLink="about-us" 

@@ -15,6 +15,7 @@ export default function Home() {
         { image: "/images/carousel_images/c2.png" },
         { image: "/images/carousel_images/c3.png" },
     ];
+    
     return (
         <>
             <Head>
@@ -29,7 +30,12 @@ export default function Home() {
                     <Carousel 
                         slides={slides} 
                         simpleMode={0} 
-                        heading={`Crafting More Than Fences,\nWe Build Lasting Connections`}
+                        heading={
+                            <>
+                                Crafting More Than Fences <br />
+                                We Build Lasting Connections
+                            </>
+                        }                        
                         subheading="Secure Your Space with a Touch of Family Warmth and Craftsmanship"
                         ctaText="Learn More"
                         ctaLink="services"    

@@ -57,7 +57,7 @@
 .caption {
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -69,7 +69,7 @@
 
 .caption h2 {
     font-size: 8vmin; 
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .caption p {
