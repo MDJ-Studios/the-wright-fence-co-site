@@ -26,7 +26,14 @@ export default function Home() {
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel slides={slides} simpleMode={0} />
+                    <Carousel 
+                        slides={slides} 
+                        simpleMode={0} 
+                        heading={`Crafting More Than Fences,\nWe Build Lasting Connections`}
+                        subheading="Secure Your Space with a Touch of Family Warmth and Craftsmanship"
+                        ctaText="Learn More"
+                        ctaLink="services"    
+                    />
                     <ServiceOffering />
                     <Reviews />
                     <Contact />
