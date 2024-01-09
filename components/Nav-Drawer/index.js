@@ -35,7 +35,7 @@ const links = [
     },
     {
         slug: "/fence-types#gallery",
-        text: "Fence Types",
+        text: "Fences",
     },
     {
         slug: "/#contact",
