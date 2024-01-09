@@ -26,12 +26,6 @@ const MyMap = () => {
             new google.maps.Marker({
                 position: latLng,
                 map,
-                label: {
-                    text: 'Service Area', 
-                    color: '#fff', 
-                    fontSize: '18px', // Text size
-                    fontWeight: 'bold' // Font weight
-                }
             });
         };
 
@@ -47,7 +41,7 @@ const MyMap = () => {
         }
     }, []);
 
-    return <div id="map" style={{ height: '375px', width: '100%' }} />;
+    return <div id="map" style={{ height: '345px', width: '100%' }} />;
 };
 
 
@@ -98,6 +92,7 @@ export default function Contact() {
             <h2>Contact Us</h2>
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>
+                    <h3>Service Area Map</h3>
                     <MyMap />
                 </div>
                 <div className={s.form_parent}>

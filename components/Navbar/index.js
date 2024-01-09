@@ -50,34 +50,45 @@ export default function Navbar({
     isSmallScreen,
     setIsSmallScreen,
     isSmallerScreen,
-    setIsSmallerScreen,
     setNavOpen,
     navOpen,
 }) {
     return (
         <nav className={styles.navbar}>
-            {/* <h1>
-                <Link href="/">The Wright Fence Co</Link>
-            </h1> */}
-            <Link href="/">
-                <Image
-                    src="/images/logo_white.svg"
-                    alt="The Wright Fence Co Logo"
-                    width={isSmallScreen ? 90 : 150}
-                    height={isSmallScreen ? 90 : 150}
-                    priority={true}
-                />
-            </Link>
             {isSmallScreen || isSmallerScreen ? (
-                <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
+                <>
+                    <Link href="/">
+                        <Image
+                            src="/images/logo.svg"
+                            alt="The Wright Fence Co Logo"
+                            width={isSmallScreen ? 90 : 150}
+                            height={isSmallScreen ? 90 : 150}
+                            priority={true}
+                        />
+                    </Link>
+                    <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
+                </>
             ) : (
-                <ul>
-                    <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
-                    <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
-                    <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
-                    <NavLink linkText="Services" path="#services" isScrollLink={true} />
-                    <li><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
-                </ul>
+                <>
+                    <ul>
+                        <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
+                        <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
+                    </ul>
+                    <Link href="/">
+                        <Image
+                            src="/images/logo.svg"
+                            alt="The Wright Fence Co Logo"
+                            width={isSmallScreen ? 90 : 150}
+                            height={isSmallScreen ? 90 : 150}
+                            priority={true}
+                        />
+                    </Link>
+                    <ul>
+                        <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
+                        <NavLink linkText="Services" path="#services" isScrollLink={true} />
+                        <li className="phone"><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
+                    </ul>
+                </>
             )}
             {navOpen && (
                 <NavDrawer

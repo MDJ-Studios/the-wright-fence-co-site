@@ -5,6 +5,8 @@
     height: 716px;
     padding: 0;
     background-color: black;
+    border-left: 10px solid #808080;
+    border-right: 10px solid #808080;
 }
 
 /* carousel images */

@@ -25,7 +25,13 @@
 .map_parent {
     border: 2px solid var(--background);
     width: 20rem;
-    /* margin-right: 6rem; */
+}
+
+.map_parent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: var(--font-sans);
 }
 
 .form_parent {
@@ -87,5 +93,8 @@
     }
     .form_parent {
         margin-bottom: 3rem;
+    }
+    .map_parent {
+        margin-top: 3rem;
     }
 }
