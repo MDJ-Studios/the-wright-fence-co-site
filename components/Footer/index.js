@@ -14,7 +14,7 @@ export default function Footer() {
                     <FontAwesomeIcon icon={faFacebook} size="2x" /> Check us Out!
                 </a>
                 <p>
-                    <a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> 682-260-9080</a>
+                    <a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} size="2x" /> 682-260-9080</a>
                 </p>
             </section>
             <p onClick={() => handleScroll("top")}>
