@@ -63,8 +63,8 @@ export default function Navbar({
                 <Image
                     src="/images/logo_white.svg"
                     alt="The Wright Fence Co Logo"
-                    width={150}
-                    height={150}
+                    width={isSmallScreen ? 90 : 150}
+                    height={isSmallScreen ? 90 : 150}
                     priority={true}
                 />
             </Link>
