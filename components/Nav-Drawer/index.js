@@ -30,11 +30,11 @@ const navDrawerStyles = {
 
 const links = [
     {
-        slug: "/about",
+        slug: "/about#about-us",
         text: "About Us",
     },
     {
-        slug: "/fence-types",
+        slug: "/fence-types#gallery",
         text: "Fence Types",
     },
     {

@@ -5,11 +5,11 @@ import s from "./contact.module.css";
 const MyMap = () => {
     useEffect(() => {
         const initMap = () => {
-            const myLatLng = { lat: 32.8223651463173, lng: -97.41485800430719 };
+            const latLng = { lat: 32.8223651463173, lng: -97.41485800430719 };
             
             const map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 7.8,
-                center: myLatLng,
+                center: latLng,
             });
 
             new google.maps.Circle({
@@ -19,16 +19,16 @@ const MyMap = () => {
                 fillColor: '#632ed4',
                 fillOpacity: 0.55,
                 map,
-                center: myLatLng,
-                radius: 80467, // 50 miles in meters
+                center: latLng,
+                radius: 80467, 
             });
 
             new google.maps.Marker({
-                position: myLatLng,
+                position: latLng,
                 map,
                 label: {
-                    text: 'Service Area', // Replace with your desired label text
-                    color: '#fff', // Text color
+                    text: 'Service Area', 
+                    color: '#fff', 
                     fontSize: '18px', // Text size
                     fontWeight: 'bold' // Font weight
                 }
