@@ -1,5 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import s from "./contact.module.css";
+
+
+const MyMap = () => {
+    useEffect(() => {
+        const initMap = () => {
+            const myLatLng = { lat: 32.8223651463173, lng: -97.41485800430719 };
+            
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7.8,
+                center: myLatLng,
+            });
+
+            new google.maps.Circle({
+                strokeColor: '#632ed4',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#632ed4',
+                fillOpacity: 0.55,
+                map,
+                center: myLatLng,
+                radius: 80467, // 50 miles in meters
+            });
+
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                label: {
+                    text: 'Service Area', // Replace with your desired label text
+                    color: '#fff', // Text color
+                    fontSize: '18px', // Text size
+                    fontWeight: 'bold' // Font weight
+                }
+            });
+        };
+
+        if (typeof window !== 'undefined' && typeof window.google !== 'undefined') {
+            initMap();
+        } else {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDtWCsngNdsOQIduF7xkjn8v4p7CSXmV6s&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            window.initMap = initMap;
+            document.head.appendChild(script);
+        }
+    }, []);
+
+    return <div id="map" style={{ height: '375px', width: '100%' }} />;
+};
+
 
 export default function Contact() {
     
@@ -48,14 +98,7 @@ export default function Contact() {
             <h2>Contact Us</h2>
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>
-                    <iframe 
-                        title="location" 
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDtWCsngNdsOQIduF7xkjn8v4p7CSXmV6s&q=fort+worth+tx" 
-                        width="100%" 
-                        height="375" 
-                        style={{ padding: 0, margin: 0, borderTop: '1px solid #808080', border: 0 }} 
-                        loading="lazy" 
-                    />
+                    <MyMap />
                 </div>
                 <div className={s.form_parent}>
                     {!formSubmitted ? (
@@ -117,15 +160,3 @@ export default function Contact() {
         </section>
     );
 }
-
-
-// export async function getStaticProps() {
-//     const message = `This page has been pre-rendered using getStaticProps!
-//     We needed to do this so that Netlify can pre-render the page at build time and see the contact form`;
-//     // Leaving this here for now until we can find a more effiecient way to do this. 
-//     return {
-//       props: {
-//         message,
-//       },
-//     };
-//   }
