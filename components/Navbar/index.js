@@ -54,50 +54,57 @@ export default function Navbar({
     navOpen,
 }) {
     return (
-        <nav className={styles.navbar}>
-            {isSmallScreen || isSmallerScreen ? (
-                <>
-                    <Link href="/">
-                        <Image
-                            src="/images/logo.svg"
-                            alt="The Wright Fence Co Logo"
-                            width={isSmallScreen ? 90 : 150}
-                            height={isSmallScreen ? 90 : 150}
-                            priority={true}
-                        />
-                    </Link>
-                    <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
-                </>
-            ) : (
-                <>
-                    <ul>
-                        <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
-                        <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
-                    </ul>
-                    <Link href="/">
-                        <Image
-                            src="/images/logo.svg"
-                            alt="The Wright Fence Co Logo"
-                            width={isSmallScreen ? 90 : 150}
-                            height={isSmallScreen ? 90 : 150}
-                            priority={true}
-                        />
-                    </Link>
-                    <ul>
-                        <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
-                        <NavLink linkText="Services" path="#services" isScrollLink={true} />
-                        <li className="phone"><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
-                    </ul>
-                </>
+        <>
+            <nav className={styles.navbar}>
+                {isSmallScreen || isSmallerScreen ? (
+                    <>
+                        <Link href="/">
+                            <Image
+                                src="/images/logo.svg"
+                                alt="The Wright Fence Co Logo"
+                                width={isSmallScreen ? 90 : 150}
+                                height={isSmallScreen ? 90 : 150}
+                                priority={true}
+                            />
+                        </Link>
+                        <Burger navOpen={navOpen} setNavOpen={setNavOpen} />
+                    </>
+                ) : (
+                    <>
+                        <ul>
+                            <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
+                            <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
+                        </ul>
+                        <Link href="/">
+                            <Image
+                                src="/images/logo.svg"
+                                alt="The Wright Fence Co Logo"
+                                width={isSmallScreen ? 90 : 150}
+                                height={isSmallScreen ? 90 : 150}
+                                priority={true}
+                            />
+                        </Link>
+                        <ul>
+                            <NavLink linkText="Contact" path="#contact" isScrollLink={true} />
+                            <NavLink linkText="Services" path="#services" isScrollLink={true} />
+                            <li className="phone"><small><a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682)<br />260-9080</a></small></li>
+                        </ul>
+                    </>
+                )}
+                {navOpen && (
+                    <NavDrawer
+                        isSmallScreen={isSmallScreen}
+                        setIsSmallScreen={setIsSmallScreen}
+                        setNavOpen={setNavOpen}
+                        navOpen={navOpen}
+                    />
+                )}
+            </nav>
+            {isSmallScreen && (
+                <div className={styles.mobileCallButtonContainer}>
+                    <a className={styles.mobileCallButton} href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> (682) 260-9080</a>
+                </div>
             )}
-            {navOpen && (
-                <NavDrawer
-                    isSmallScreen={isSmallScreen}
-                    setIsSmallScreen={setIsSmallScreen}
-                    setNavOpen={setNavOpen}
-                    navOpen={navOpen}
-                />
-            )}
-        </nav>
+        </>
     );
 }
