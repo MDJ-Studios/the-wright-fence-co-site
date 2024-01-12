@@ -5,8 +5,7 @@
     height: 716px;
     padding: 0;
     background-color: black;
-    border-left: 10px solid #808080;
-    border-right: 10px solid #808080;
+    border-bottom: 5px solid var(--primary);
 }
 
 /* carousel images */
@@ -102,7 +101,5 @@
 @media (max-width: 768px) {
     .section_carousel {
         height: 600px;
-        border-left: 2px solid #808080;
-        border-right: 2px solid #808080;
     }
 }

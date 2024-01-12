@@ -56,12 +56,12 @@ export default function Navbar({
             <nav className={styles.navbar}>
                 {isMobileScreen ? (
                     <>
-                        <Link href="/">
+                        <Link className={styles.logoLink} href="/">
                             <Image
                                 src="/images/logo.svg"
                                 alt="The Wright Fence Co Logo"
-                                width={isMobileScreen ? 90 : 150}
-                                height={isMobileScreen ? 90 : 150}
+                                width={isMobileScreen ? 135 : 150}
+                                height={isMobileScreen ? 135 : 150}
                                 priority={true}
                             />
                         </Link>

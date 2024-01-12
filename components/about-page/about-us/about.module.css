@@ -34,7 +34,6 @@
 
 @media (max-width: 425px) {
     .about_desc {
-        font-size: 2rem;
         width: 100%;
     }
 }

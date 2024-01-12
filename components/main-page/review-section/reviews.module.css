@@ -6,8 +6,8 @@
     background-color: #000;
     color: #fff;
     padding: 5rem 0 5rem 0;
-    border-left: 10px solid #808080;
-    border-right: 10px solid #808080;
+    border-left: 10px solid var(--primary);
+    border-right: 10px solid var(--primary);
 }
 
 .section_reviews h2 {
