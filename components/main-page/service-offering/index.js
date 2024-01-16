@@ -6,19 +6,19 @@ const services = [
         id: 1,
         title: "Fences",
         description: "A fence is a boundary structure crafted from materials like wood, metal, or vinyl, designed to enclose and define outdoor spaces. It serves both practical and aesthetic purposes, offering privacy, security, and a distinctive look to your property.",
-        imageUrl: "/images/services-fences.png",
+        imageUrl: "/images/carousel_images/c3.png",
     },
     {
         id: 2,
         title: "Staining",
         description: "Staining is a protective and decorative process where a colored solution is applied to wood surfaces, such as fences or decks. It enhances the wood's appearance, providing a rich tone while safeguarding it from elements like UV rays and moisture, ultimately prolonging the lifespan of the structure.",
-        imageUrl: "/images/services-staining.png",
+        imageUrl: "/images/carousel_images/c2.png",
     },
     {
         id: 3,
         title: "Decks",
         description: "A deck is an elevated outdoor platform, often attached to a house, designed for various activities. It serves as an extension of your living space, providing a versatile area for relaxation, social gatherings, and enjoying the outdoors in a comfortable and elevated setting.",
-        imageUrl: "/images/services-decks.png",
+        imageUrl: "/images/decks.png",
     },
     // { TODO: customer will provide image
     //     id: 3,
