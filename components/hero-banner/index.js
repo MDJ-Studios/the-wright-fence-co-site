@@ -10,8 +10,7 @@ export default function HeroBanner({ image, heading, subheading, ctaText, ctaLin
             <div>
                 <Image 
                     src={image} 
-                    layout="fill" 
-                    objectFit="cover" 
+                    fill={true} 
                     alt="carousel image"
                     priority
                 />

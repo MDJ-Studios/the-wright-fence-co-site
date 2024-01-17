@@ -10,6 +10,10 @@
 
 /* carousel images */
 
+.section_carousel img {
+    object-fit: cover;
+}
+
 .slide {
     opacity: 0.5;
 }

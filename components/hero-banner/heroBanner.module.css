@@ -10,6 +10,7 @@
 
 .section_banner img {
     object-position: 0 -150px;
+    object-fit: cover;
 }
 
 

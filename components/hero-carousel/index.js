@@ -27,7 +27,7 @@ export default function Carousel({ slides, simpleMode, heading, subheading, ctaT
                 <div className={index === current ? s.slide_active : s.slide} key={slide.id || index}>
                     {index === current && (
                         <>
-                            <Image src={slide.image} layout="fill" objectFit="cover" alt="carousel image" />
+                            <Image src={slide.image} fill={true} alt="carousel image" priority />
                             <div className={s.caption}>
                                 <h2>{heading}</h2>
                                 <p>{subheading}</p>
