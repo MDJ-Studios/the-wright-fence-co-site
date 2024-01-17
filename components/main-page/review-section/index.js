@@ -4,15 +4,15 @@ export default function Reviews() {
     return (
         <section className={`${s.section_reviews} ${s.flex} ${s.flex_wrap}`}>
             {/* parent container */}
-            <h2>What our customers are saying about us</h2>
+            <h2>What Our Customers Say About Us</h2>
             <div className={`${s.parent_container} ${s.flex}`}>
                 {/* container 1 */}
                 <div className={`${s.content_container} ${s.flex}`}>
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>
                         <iframe
-                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobertfeil09%2Fposts%2Fpfbid0FrjkNzDPFu6jc9xDYTMRgRxZ3e5zhAU5LMAJWBqM2A7cf759uvMTPHk96thxgGMWl&show_text=true&width=500"
-                            width="500"
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frobertfeil09%2Fposts%2Fpfbid0FrjkNzDPFu6jc9xDYTMRgRxZ3e5zhAU5LMAJWBqM2A7cf759uvMTPHk96thxgGMWl&show_text=true&width=auto"
+                            width="100%"
                             height="600"
                             style={{ border: 'none', overflow: 'hidden' }}
                             allowFullScreen={true}
@@ -26,8 +26,8 @@ export default function Reviews() {
                     {/* text */}
                     <div className={`${s.content_text} ${s.flex}`}>
                         <iframe
-                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshelly.yocham.5%2Fposts%2Fpfbid036p6CSvfkWM8k85dNmLwUPdMHTgmtGtzQG8foc6zZTw8ahB6kyc4AY739QWzQycKFl&show_text=true&width=500"
-                            width="500"
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshelly.yocham.5%2Fposts%2Fpfbid036p6CSvfkWM8k85dNmLwUPdMHTgmtGtzQG8foc6zZTw8ahB6kyc4AY739QWzQycKFl&show_text=true&width=auto"
+                            width="100%"
                             height="600"
                             style={{ border: 'none', overflow: 'hidden' }}
                             allowFullScreen={true}
@@ -38,12 +38,12 @@ export default function Reviews() {
                 {/* container 3 */}
 
                 {/* text */}
-                {/* <div className={`${s.content_container} ${s.flex}`}>
+                <div className={`${s.content_container} ${s.flex}`}>
                     <div className={`${s.content_text} ${s.flex}`}>
                         <iframe
-                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0h9RsSpJdGH29wXUMQHF5yt1RmwnhCS8jEWDALYtQoKq4huUKCPhn31e7eQg6Ka7kl%26id%3D1729232065&show_text=true&width=500"
-                            width="300"
-                            height="400"
+                            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0h9RsSpJdGH29wXUMQHF5yt1RmwnhCS8jEWDALYtQoKq4huUKCPhn31e7eQg6Ka7kl%26id%3D1729232065&show_text=true&width=auto"
+                            width="100%"
+                            height="600"
                             style={{ border: 'none', overflow: 'hidden' }}
                             scrolling="no"
                             frameBorder="0"
@@ -51,7 +51,7 @@ export default function Reviews() {
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                         ></iframe>
                     </div>
-                </div> */}
+                </div>
 
             </div>
         </section>

@@ -20,12 +20,12 @@ const services = [
         description: "A deck is an elevated outdoor platform, often attached to a house, designed for various activities. It serves as an extension of your living space, providing a versatile area for relaxation, social gatherings, and enjoying the outdoors in a comfortable and elevated setting.",
         imageUrl: "/images/decks.png",
     },
-    // { TODO: customer will provide image
-    //     id: 3,
-    //     title: "Patio Covers",
-    //     description: "A patio cover is a stylish extension to your outdoor living space, providing shade and protection from the elements. Whether it's a pergola, awning, or roofed structure, a patio cover transforms your patio into a comfortable retreat, ideal for relaxing, dining, and enjoying the outdoors in any weather.",
-    //     imageUrl: "/images/services-patio-covers.png",
-    // },
+    { 
+        id: 3,
+        title: "Patio Covers",
+        description: "A patio cover is a stylish extension to your outdoor living space, providing shade and protection from the elements. Whether it's a pergola, awning, or roofed structure, a patio cover transforms your patio into a comfortable retreat, ideal for relaxing, dining, and enjoying the outdoors in any weather.",
+        imageUrl: "/images/services-patio-covers.jpg",
+    },
 ];
 
 

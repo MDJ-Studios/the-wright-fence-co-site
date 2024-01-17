@@ -6,11 +6,11 @@
     align-items: center;
     background-color: var(--background);
     color: black;
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 0 0;
 }
 
 .section_services h2 {
-    font-size: 3vmax;
+    font-size: 4.3vmax;
     font-weight: bold;
     margin-bottom: 3rem;
 }
@@ -51,6 +51,9 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .service_item {
-        width: 18rem;
+        width: 23rem;
+    }
+    .services_container {
+        margin-bottom: 3rem;
     }
 }

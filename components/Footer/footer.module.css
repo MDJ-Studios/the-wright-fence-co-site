@@ -7,9 +7,9 @@
     background-color: var(--primary);
     padding: 5rem 0 7rem 0;
     color: var(--background);
-    border-left: 10px solid #808080;
-    border-right: 10px solid #808080;
-    border-bottom: 7px solid #808080;
+    border-left: 5px solid #808080;
+    border-right: 5px solid #808080;
+    border-bottom: 5px solid #808080;
 }
 
 .footer h3 {
