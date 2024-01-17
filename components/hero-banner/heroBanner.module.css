@@ -8,6 +8,10 @@
     border-bottom: 5px solid var(--primary);
 }
 
+.section_banner img {
+    object-position: 0 -150px;
+}
+
 
 /* heading and subheading */
 
@@ -16,38 +20,44 @@
     z-index: 1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: var(--background); 
-    width: 80%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 2rem; 
+    color: var(--background);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
 }
 
 .caption h2 {
-    font-size: 8vmin; 
+    font-size: 8vmin;
     margin-bottom: 0.5rem;
 }
 
 .caption p {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 /* cta button */
 
 .ctaButton {
-    margin-top: 2rem; 
+    margin-top: 2rem;
     padding: 10px 20px;
-    font-size: 1rem; 
+    font-size: 1rem;
     font-family: var(--font-sans);
-    color: var(--background); 
-    background-color: var(--primary); 
+    color: var(--background);
+    background-color: var(--primary);
     border: none;
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .ctaButton:hover {
     background-color: #4a1fa7;
+}
+
+@media screen and (max-width: 768px) {
+    .section_banner img {
+        object-position: center;
+    }
 }

@@ -18,7 +18,7 @@ export default function About() {
             <Layout>
                 <main>
                     <HeroBanner 
-                        image="/images/family.jpg" 
+                        image="/images/cole-family.jpeg" 
                         heading={
                             <>
                                 Crafting More Than Fences <br />

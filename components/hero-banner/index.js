@@ -8,7 +8,13 @@ export default function HeroBanner({ image, heading, subheading, ctaText, ctaLin
     return (
         <div className={s.section_banner}>
             <div>
-                <Image src="/images/family.jpg" layout="fill" objectFit="cover" alt="carousel image" />
+                <Image 
+                    src={image} 
+                    layout="fill" 
+                    objectFit="cover" 
+                    alt="carousel image"
+                    priority
+                />
                 <div className={s.caption}>
                     <h2>{heading}</h2>
                     <p>{subheading}</p>
