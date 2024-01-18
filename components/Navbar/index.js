@@ -70,8 +70,8 @@ export default function Navbar({
                 ) : (
                     <>
                         <ul>
-                            <NavLink linkText="About Us" path="/about#content" isScrollLink={false} />
-                            <NavLink linkText="Fence Types" path="/fence-types#gallery" isScrollLink={false} />
+                            <NavLink linkText="About Us" path="/about" isScrollLink={false} />
+                            <NavLink linkText="Fence Types" path="/fence-types" isScrollLink={false} />
                         </ul>
                         <Link href="/">
                             <Image

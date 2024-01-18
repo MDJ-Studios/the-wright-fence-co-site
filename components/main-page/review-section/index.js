@@ -4,7 +4,7 @@ export default function Reviews() {
     return (
         <section className={`${s.section_reviews} ${s.flex} ${s.flex_wrap}`}>
             {/* parent container */}
-            <h2>What Our Customers Say About Us</h2>
+            <h2>What Our Customers Are Saying</h2>
             <div className={`${s.parent_container} ${s.flex}`}>
                 {/* container 1 */}
                 <div className={`${s.content_container} ${s.flex}`}>
