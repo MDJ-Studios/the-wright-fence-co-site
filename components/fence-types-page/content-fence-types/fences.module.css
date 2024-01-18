@@ -49,6 +49,7 @@
     word-wrap: break-word;
     margin-bottom: 1rem;
 }
+
 /* helper classes */
 .flex_center {
     display: flex;
@@ -64,7 +65,7 @@
 
 @media (max-width: 720px) {
     .flex_center {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .content_text {
         margin: 1rem 0 0 0;
