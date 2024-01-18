@@ -32,7 +32,7 @@ export default function FenceTypes() {
                         simpleMode={0}  
                         heading="Elevate Your Space with Elegant Boundaries"
                         subheading="Discover the Perfect Blend of Privacy, Style, and Durability"
-                        ctaText="See Our Available Fence Types"
+                        ctaText="See Available Fence Types"
                         ctaLink="gallery"
                     />
                     <SectionFenceTypes />
