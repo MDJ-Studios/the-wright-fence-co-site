@@ -15,7 +15,7 @@ export default function Home() {
         { image: "/images/carousel_images/c2.png" },
         { image: "/images/carousel_images/c3.png" },
     ];
-    
+
     return (
         <>
             <Head>
@@ -30,22 +30,29 @@ export default function Home() {
                 <meta property="og:description" content="Discover The Wright Fence Co: your partner in premium fencing, staining, decks, and patio covers." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://thewrightfenceco.com" />
-                <meta property="og:image" content="/images/logo.png" />
+                <meta property="og:image" content="https://thewrightfenceco.com/images/logo.png" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:locale" content="en_US" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="The Wright Fence Co | Quality Fencing, Decks, and Patio Covers" />
+                <meta name="twitter:description" content="Discover The Wright Fence Co: your partner in premium fencing, staining, decks, and patio covers." />
+                <meta name="twitter:image" content="https://thewrightfenceco.com/images/logo.png" />
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel 
-                        slides={slides} 
-                        simpleMode={0} 
+                    <Carousel
+                        slides={slides}
+                        simpleMode={0}
                         heading={
                             <>
                                 Crafting More Than Fences <br />
                                 We Build Lasting Connections
                             </>
-                        }                        
+                        }
                         subheading="Secure Your Space with a Touch of Family Warmth and Craftsmanship"
                         ctaText="Learn More"
-                        ctaLink="services"    
+                        ctaLink="services"
                     />
                     <ServiceOffering />
                     <Reviews />
