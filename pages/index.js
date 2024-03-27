@@ -30,7 +30,7 @@ export default function Home() {
                 <meta property="og:description" content="Discover The Wright Fence Co: your partner in premium fencing, staining, decks, and patio covers." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://thewrightfenceco.com" />
-                <meta property="og:image" content="https://thewrightfenceco.com/logo.png" />
+                <meta property="og:image" content="/images/logo.png" />
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>

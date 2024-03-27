@@ -30,7 +30,7 @@ export default function FenceTypes() {
                 <meta property="og:description" content="Discover our selection of high-quality fence types including cedar, wrought iron, and more. Ensure your property's security with style at The Wright Fence Co." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://thewrightfenceco.com/fence-types" />
-                <meta property="og:image" content="https://thewrightfenceco.com/board-on-board.png" />
+                <meta property="og:image" content="/images/logo.png" />
 
             </Head>
             <Layout>

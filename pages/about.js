@@ -20,7 +20,7 @@ export default function About() {
                 <meta property="og:description" content="Learn about The Wright Fence Co's commitment to security, craftsmanship, and building lasting relationships. Meet Cole Wright, our founder and passionate craftsman." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://thewrightfenceco.com/about" />
-                <meta property="og:image" content="https://thewrightfenceco.com/cole-family.jpeg" />
+                <meta property="og:image" content="/images/logo.png" />
             </Head>
             <Layout>
                 <main>
