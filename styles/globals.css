@@ -38,6 +38,7 @@
     --text: #000000;
     --background: #fcfcfd;
     --primary: #632ed4;
+    --primary-light: #ac9ad2;
     --secondary: #545050;
     --accent: #9c9897;
 }
@@ -68,7 +69,6 @@ a {
 p {
     font-family: var(--font-sans);
 }
-
 
 .burger {
     display: none;

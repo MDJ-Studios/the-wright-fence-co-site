@@ -11,11 +11,11 @@ export default function Footer() {
             <h3>The Wright Fence Co.</h3>
             <section>
                 <a href="https://www.facebook.com/TCBAutoSpa/" target="_blank">
-                    <FontAwesomeIcon icon={faFacebook} size="2x" /> Check us Out!
+                    <FontAwesomeIcon icon={faFacebook} size="2x" />
                 </a>
-                <p>
-                    <a href="tel:1-682-260-9080"><FontAwesomeIcon icon={faPhone} /> 682-260-9080</a>
-                </p>
+                <a href="tel:1-682-260-9080">
+                    <FontAwesomeIcon icon={faPhone} size="2x" />
+                </a>
             </section>
             <p onClick={() => handleScroll("top")}>
                 Back to Top

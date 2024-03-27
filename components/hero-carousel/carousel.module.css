@@ -5,9 +5,14 @@
     height: 716px;
     padding: 0;
     background-color: black;
+    border-bottom: 5px solid var(--primary);
 }
 
 /* carousel images */
+
+.section_carousel img {
+    object-fit: cover;
+}
 
 .slide {
     opacity: 0.5;
@@ -57,7 +62,7 @@
 .caption {
     position: absolute;
     z-index: 2;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%); 
     text-align: center;
@@ -68,8 +73,8 @@
 }
 
 .caption h2 {
-    font-size: 4rem; 
-    margin-bottom: 0.5rem;
+    font-size: 8vmin; 
+    margin-bottom: 1.2rem;
 }
 
 .caption p {
@@ -89,8 +94,17 @@
     border-radius: 5px; 
     cursor: pointer; 
     transition: background-color 0.3s; 
+    font-weight: 700;
 }
 
 .ctaButton:hover {
     background-color: #4a1fa7;
+}
+
+/* responsive design */
+
+@media (max-width: 768px) {
+    .section_carousel {
+        height: 600px;
+    }
 }

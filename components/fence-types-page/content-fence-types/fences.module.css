@@ -8,7 +8,7 @@
 
 .section_fence h2 {
     margin: 1rem 0 0 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 /* parent div */
 
@@ -49,6 +49,7 @@
     word-wrap: break-word;
     margin-bottom: 1rem;
 }
+
 /* helper classes */
 .flex_center {
     display: flex;
@@ -63,12 +64,19 @@
 /* mobile css */
 
 @media (max-width: 720px) {
+    .section_fence {
+        margin: 2rem auto;
+    }
     .flex_center {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .content_text {
         margin: 1rem 0 0 0;
     }
+    .content_image {
+        margin-top: 1rem;
+    }
+
 }
 
 @media (max-width: 380px) {
@@ -76,5 +84,8 @@
         position: relative;
         width: 100%;
         height: 13rem;
+    }
+    .content_image {
+      margin-top: 1rem;
     }
 }

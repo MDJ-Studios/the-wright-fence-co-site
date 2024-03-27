@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const navitemStyles = {
-    fontSize: "3rem",
+    fontSize: "8vmin",
     textTransform: "uppercase",
     padding: "1.5rem",
     fontWeight: "bold",
@@ -18,7 +18,7 @@ const navDrawerStyles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: "var(--primary)",
+    backgroundColor: "#000",
     minHeight: "100vh",
     padding: "2rem",
     position: "absolute",
@@ -35,7 +35,7 @@ const links = [
     },
     {
         slug: "/fence-types",
-        text: "Fence Types",
+        text: "Fences",
     },
     {
         slug: "/#contact",
@@ -47,19 +47,19 @@ const links = [
     },
 ];
 
-export default function NavDrawer({ navOpen, setNavOpen, isSmallScreen }) {
+export default function NavDrawer({ isNavOpen, setNavOpen, isMobileScreen }) {
     return (
         <nav
             className="drawer"
             style={{
-                transform: navOpen && isSmallScreen ? "translateX(0)" : "translateX(-1000%)",
-                width: isSmallScreen && "100%",
-                textAlign: isSmallScreen ? "center" : "left",
+                transform: isNavOpen && isMobileScreen ? "translateX(0)" : "translateX(-1000%)",
+                width: isMobileScreen && "100%",
+                textAlign: isMobileScreen ? "center" : "left",
                 ...navDrawerStyles,
             }}
         >
             {links.map((link, idx) => (
-                <Link key={idx} onClick={() => setNavOpen(!navOpen)} style={navitemStyles} href={link.slug}>
+                <Link key={idx} onClick={() => setNavOpen(!isNavOpen)} style={navitemStyles} href={link.slug}>
                     {link.text}
                 </Link>
             ))}

@@ -4,6 +4,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--primary);
+    padding: 5rem 0 7rem 0;
+    color: var(--background);
+    border-left: 5px solid #808080;
+    border-right: 5px solid #808080;
+    border-bottom: 5px solid #808080;
 }
 
 .footer h3 {
@@ -19,17 +25,20 @@
     display: flex;
     align-items: center;
     width: 22%;
-    justify-content: space-between;
+    justify-content: center;
     margin: .5rem 0;
 }
 
-.footer section a {
-    display: flex;
-    align-items: center;
-    font-family: var(--font-sans);
-    font-weight: 600;
+.footer section a:first-of-type {
+    margin-right: .5rem;
 }
 
-.footer section a svg {
-    margin-right: .5rem;
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .footer {
+        border-left: 2px solid #808080;
+        border-right: 2px solid #808080;
+    }
 }
