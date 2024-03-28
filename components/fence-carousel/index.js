@@ -5,7 +5,6 @@ import s from "./fenceCarousel.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 export default class FenceCarousel extends Component {
     render() {
         const settings = {
@@ -22,31 +21,35 @@ export default class FenceCarousel extends Component {
             <div className={s.customSlider}>
                 <Slider {...settings}>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/board-on-board-with-top-cap-and-trim.png" className={s.imageFill} alt="carousel image" />
+                        <img
+                            src="/images/board-on-board-with-top-cap-and-trim.jpg"
+                            className={s.imageFill}
+                            alt="carousel image"
+                        />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/board-on-board.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/board-on-board.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/chain-link.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/chain-link.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/decks.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/decks.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/pipe-fence.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/pipe-fence.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/pre-stained-cedar.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/pre-stained-cedar.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/pre-stained-cedar.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/pre-stained-cedar.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/side-by-side.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/side-by-side.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/wrought-iron.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/wrought-iron.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                 </Slider>
             </div>
