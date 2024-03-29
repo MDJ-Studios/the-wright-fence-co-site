@@ -49,7 +49,7 @@ export default function SectionFenceTypes() {
         // {
         //     title: "Decks",
         //     description: "A deck is an inviting outdoor platform, typically attached to a house, designed for relaxation and socializing. It extends your living space, providing an ideal spot for activities like dining, entertaining, or simply enjoying the outdoors in a comfortable and elevated setting.",
-        //     imageSrc: "/images/decks.png",
+        //     imageSrc: "/images/decks.jpg",
         // },
     ];
 
