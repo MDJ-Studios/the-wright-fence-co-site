@@ -47,16 +47,21 @@ export default class CustomSlider extends Component {
             <div className={s.customSlider}>
                 <Slider {...settings}>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/carousel_images/c1.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/carousel_images/c1.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/carousel_images/c2.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/carousel_images/c2.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/carousel_images/c3.png" className={s.imageFill} alt="carousel image" />
+                        <img
+                            src="/images/carousel_images/c3.jpg"
+                            className={s.imageFill}
+                            alt="carousel image"
+                            priority={true}
+                        />
                     </div>
                     <div className={s.imageFillContainer}>
-                        <img src="/images/carousel_images/c4.png" className={s.imageFill} alt="carousel image" />
+                        <img src="/images/carousel_images/c4.jpg" className={s.imageFill} alt="carousel image" />
                     </div>
                 </Slider>
             </div>

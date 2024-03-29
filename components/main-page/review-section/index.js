@@ -1,5 +1,5 @@
 import s from "./reviews.module.css";
-// ${s.flex_wrap}
+
 export default function Reviews() {
     return (
         <section className={`${s.section_reviews} ${s.flex} `}>

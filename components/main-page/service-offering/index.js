@@ -24,7 +24,7 @@ const services = [
         imageUrl: "/images/decks.jpg",
     },
     {
-        id: 3,
+        id: 4,
         title: "Patio Covers",
         description:
             "A patio cover is a stylish extension to your outdoor living space, providing shade and protection from the elements. Whether it's a pergola, awning, or roofed structure, a patio cover transforms your patio into a comfortable retreat, ideal for relaxing, dining, and enjoying the outdoors in any weather.",
@@ -40,13 +40,7 @@ export default function ServiceOffering() {
                 {services.map((service) => (
                     <div key={service.id} className={s.service_item}>
                         <div className={s.service_image}>
-                            <Image
-                                src={service.imageUrl}
-                                alt={`Service: ${service.title}`}
-                                objectFit="cover"
-                                width={250}
-                                height={250}
-                            />
+                            <Image src={service.imageUrl} alt={`Service: ${service.title}`} width={250} height={210} />
                         </div>
                         <div className={s.service_description}>
                             <h2>{service.title}</h2>
