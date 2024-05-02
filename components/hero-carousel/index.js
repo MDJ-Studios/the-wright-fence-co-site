@@ -1,42 +1,50 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import handleScroll from "@/utils/handleScroll";
+
+import React, { useState, useEffect, Component } from "react";
+import Image from "next/image";
 
 import s from "./carousel.module.css";
 
-export default function Carousel({ slides, simpleMode, heading, subheading, ctaText, ctaLink }) {
-    const [current, setCurrent] = useState(0);
+export default class Carousel extends Component {
+    render() {
+        const settings = {
+            infinite: true,
+            autoplay: true,
+            fade: true,
+            swipeToSlide: true,
+            initialSlide: 0,
+            speed: 600,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        };
 
-    const nextSlide = () => setCurrent(current => (current === slides.length - 1 ? 0 : current + 1));
-    const prevSlide = () => setCurrent(current => (current === 0 ? slides.length - 1 : current - 1));
-
-    useEffect(() => {
-        if (!simpleMode) {
-            const interval = setInterval(nextSlide, 4000);
-            return () => clearInterval(interval);
-        }
-    }, [slides.length, simpleMode]);
-
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return <div>No slides available</div>; // Improved fallback UI
-    }
-
-    return (
-        <div className={s.section_carousel}>
-            {slides.map((slide, index) => (
-                <div className={index === current ? s.slide_active : s.slide} key={slide.id || index}>
-                    {index === current && (
-                        <>
-                            <Image src={slide.image} fill={true} alt="carousel image" priority />
-                            <div className={s.caption}>
-                                <h2>{heading}</h2>
-                                <p>{subheading}</p>
-                                <button className={s.ctaButton} onClick={() => handleScroll(ctaLink)}>{ctaText}</button>
-                            </div>
-                        </>
-                    )}
+        return (
+            <div className={s.section_carousel}>
+                <div className={s.caption}>
+                    <h2>
+                        Crafting More Than Fences <br />
+                        We Build Lasting Connections
+                    </h2>
+                    <p>Secure Your Space with a Touch of Family Warmth and Craftsmanship</p>
+                    <button className={s.ctaButton} onClick={() => handleScroll("services")}>
+                        Learn More
+                    </button>
                 </div>
-            ))}
-        </div>
-    );
+                <Slider {...settings}>
+                    <div className={s.imageFillContainer}>
+                        <img src="/images/carousel_images/c1.jpg" className={s.imageFill} alt="carousel image" />
+                    </div>
+                    <div className={s.imageFillContainer}>
+                        <img src="/images/carousel_images/c2.jpg" className={s.imageFill} alt="carousel image" />
+                    </div>
+                    <div className={s.imageFillContainer}>
+                        <img src="/images/carousel_images/c3.jpg" className={s.imageFill} alt="carousel image" />
+                    </div>
+                </Slider>
+            </div>
+        );
+    }
 }

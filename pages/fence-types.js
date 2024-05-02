@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import FenceCarousel from "@/components/fence-carousel";
 import SectionFenceTypes from "@/components/fence-types-page/content-fence-types";
-import Carousel from "@/components/hero-carousel";
+import CustomCarousel from "@/components/custom-carousel";
 
 export default function FenceTypes() {
     const slides = [
@@ -53,7 +53,7 @@ export default function FenceTypes() {
             </Head>
             <Layout>
                 <main>
-                    <Carousel
+                    <CustomCarousel
                         slides={slides}
                         simpleMode={0}
                         heading="Elevate Your Space with Elegant Boundaries"
