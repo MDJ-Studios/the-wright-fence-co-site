@@ -1,6 +1,6 @@
 /* section parent */
 .section_carousel {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     height: 716px;
     padding: 0;
@@ -28,7 +28,7 @@
 .caption {
     position: absolute;
     z-index: 2;
-    top: 20rem;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -75,5 +75,8 @@
     }
     .imageFillContainer {
         height: 595px;
+    }
+    .caption {
+        top: 75%;
     }
 }
