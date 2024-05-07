@@ -3,19 +3,8 @@ import Head from "next/head";
 
 import FenceCarousel from "@/components/fence-carousel";
 import SectionFenceTypes from "@/components/fence-types-page/content-fence-types";
-import CustomCarousel from "@/components/custom-carousel";
 
 export default function FenceTypes() {
-    const slides = [
-        { image: "/images/board-on-board-with-top-cap-and-trim.jpg" },
-        { image: "/images/board-on-board.jpg" },
-        { image: "/images/chain-link.jpg" },
-        { image: "/images/decks.jpg" },
-        { image: "/images/pipe-fence.jpg" },
-        { image: "/images/pre-stained-cedar.jpg" },
-        { image: "/images/side-by-side.jpg" },
-        { image: "/images/wrought-iron.jpg" },
-    ];
     return (
         <>
             <Head>
@@ -53,14 +42,7 @@ export default function FenceTypes() {
             </Head>
             <Layout>
                 <main>
-                    <CustomCarousel
-                        slides={slides}
-                        simpleMode={0}
-                        heading="Elevate Your Space with Elegant Boundaries"
-                        subheading="Discover the Perfect Blend of Privacy, Style, and Durability"
-                        ctaText="See Available Fence Types"
-                        ctaLink="gallery"
-                    />
+                    <FenceCarousel />
                     <SectionFenceTypes />
                 </main>
             </Layout>
