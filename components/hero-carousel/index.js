@@ -8,7 +8,7 @@ import Image from "next/image";
 
 import s from "./carousel.module.css";
 
-export default class Carousel extends Component {
+export default class HeroCarousel extends Component {
     render() {
         const settings = {
             infinite: true,

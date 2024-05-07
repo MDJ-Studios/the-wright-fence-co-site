@@ -4,21 +4,30 @@ import Slider from "react-slick";
 import s from "./fenceCarousel.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import handleScroll from "@/utils/handleScroll";
 
 export default class FenceCarousel extends Component {
     render() {
         const settings = {
             infinite: true,
             autoplay: true,
+            fade: true,
             swipeToSlide: true,
-            lazyLoad: "ondemand",
-            speed: 500,
+            initialSlide: 0,
+            speed: 600,
             slidesToShow: 1,
             slidesToScroll: 1,
         };
 
         return (
-            <div className={s.customSlider}>
+            <div className={s.section_carousel}>
+                <div className={s.caption}>
+                    <h2>Elevate Your Space with Elegant Boundaries</h2>
+                    <p>Discover the Perfect Blend of Privacy, Style, and Durability</p>
+                    <button className={s.ctaButton} onClick={() => handleScroll("gallery")}>
+                        See Available Fence Types
+                    </button>
+                </div>
                 <Slider {...settings}>
                     <div className={s.imageFillContainer}>
                         <img
@@ -56,3 +65,12 @@ export default class FenceCarousel extends Component {
         );
     }
 }
+
+/* <CustomCarousel
+slides={slides}
+simpleMode={0}
+heading="Elevate Your Space with Elegant Boundaries"
+subheading="Discover the Perfect Blend of Privacy, Style, and Durability"
+ctaText="See Available Fence Types"
+ctaLink="gallery"
+/> */

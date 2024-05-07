@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 
 import ServiceOffering from "@/components/main-page/service-offering/";
-import Carousel from "@/components/hero-carousel/";
+import HeroCarousel from "@/components/hero-carousel/";
 import Contact from "@/components/main-page/contact-us";
 import Layout from "@/components/Layout";
 import Reviews from "@/components/main-page/review-section";
@@ -47,7 +47,7 @@ export default function Home() {
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel />
+                    <HeroCarousel />
                     <ServiceOffering />
                     <Reviews />
                     <Contact />
