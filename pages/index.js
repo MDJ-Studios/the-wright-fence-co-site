@@ -10,12 +10,6 @@ import Reviews from "@/components/main-page/review-section";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    const slides = [
-        { image: "/images/carousel_images/c1.jpg" },
-        { image: "/images/carousel_images/c2.jpg" },
-        { image: "/images/carousel_images/c3.jpg" },
-    ];
-
     return (
         <>
             <Head>
@@ -53,19 +47,7 @@ export default function Home() {
             </Head>
             <Layout>
                 <main className={`${inter.className}`}>
-                    <Carousel
-                        slides={slides}
-                        simpleMode={0}
-                        heading={
-                            <>
-                                Crafting More Than Fences <br />
-                                We Build Lasting Connections
-                            </>
-                        }
-                        subheading="Secure Your Space with a Touch of Family Warmth and Craftsmanship"
-                        ctaText="Learn More"
-                        ctaLink="services"
-                    />
+                    <Carousel />
                     <ServiceOffering />
                     <Reviews />
                     <Contact />
