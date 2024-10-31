@@ -70,15 +70,13 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormSubmitted(true);
-
-        await fetch("/", {
-            method: "POST",
+        await fetch('/__forms.html', {  // Updated URL for Netlify compatibility
+            method: 'POST',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded",
             },
-            body: encode(formData),
+            body: encode(formData)
         });
-
         setTimeout(() => {
             setFormSubmitted(false);
         }, 3000);
@@ -92,7 +90,6 @@ export default function Contact() {
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>
                     <MyMap />
-                    {/* <h3>Service Area Map</h3> */}
                 </div>
                 <div className={s.form_parent}>
                     {!formSubmitted ? (
@@ -107,6 +104,7 @@ export default function Contact() {
                                     placeholder="Mr. Smith"
                                     value={formData.name}
                                     onChange={handleChange}
+                                    required
                                 />
                             </div>
                             <div className={s.email_parent}>
@@ -128,6 +126,7 @@ export default function Contact() {
                                     placeholder="Hi there, I'm interested in a quote for a new fence."
                                     value={formData.message}
                                     onChange={handleChange}
+                                    required
                                 />
                             </div>
                             <button type="submit" className={s.submit}>
