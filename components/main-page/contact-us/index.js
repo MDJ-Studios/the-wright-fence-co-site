@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./contact.module.css";
 
-
 const MyMap = () => {
     useEffect(() => {
         const initMap = () => {
@@ -44,7 +43,6 @@ const MyMap = () => {
     return <div id="map" style={{ height: '400px', width: '100%' }} />;
 };
 
-
 export default function Contact() {
     
     const getResetFormData = () => ({
@@ -72,13 +70,13 @@ export default function Contact() {
         e.preventDefault();
         setFormSubmitted(true);
 
-        await fetch('/', {
+        await fetch('/__forms.html', {  // Updated URL for Netlify compatibility
             method: 'POST',
             headers: {
                 'Content-type': 'application/x-www-form-urlencoded'
             },
             body: encode(formData)
-        })
+        });
         
         setTimeout(() => {
             setFormSubmitted(false);
@@ -93,7 +91,6 @@ export default function Contact() {
             <div className={`${s.div_parent}`}>
                 <div className={s.map_parent}>
                     <MyMap />
-                    {/* <h3>Service Area Map</h3> */}
                 </div>
                 <div className={s.form_parent}>
                     {!formSubmitted ? (
@@ -117,7 +114,8 @@ export default function Contact() {
                                     placeholder="Mr. Smith"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    />
+                                    required
+                                />
                             </div>
                             <div className={s.email_parent}>
                                 <input
@@ -128,7 +126,7 @@ export default function Contact() {
                                     placeholder="m.smith@gmail.com"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    />
+                                />
                             </div>
                             <div className={s.message_parent}>
                                 <textarea
@@ -138,7 +136,8 @@ export default function Contact() {
                                     placeholder="Hi there, I'm interested in a quote for a new fence."
                                     value={formData.message}
                                     onChange={handleChange}
-                                    />
+                                    required
+                                />
                             </div>
                             <button type="submit" className={s.submit}>
                                 Submit
