@@ -17,6 +17,7 @@
 
 /* parent container */
 .parent_container {
+    margin: auto;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
