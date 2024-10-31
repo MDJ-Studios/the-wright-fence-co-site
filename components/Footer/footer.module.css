@@ -1,5 +1,5 @@
 .footer {
-    height: 6rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -17,7 +17,7 @@
 }
 
 .footer p:last-of-type {
-    margin-top: .5rem;
+    /* margin-top: .5rem; */
     cursor: pointer;
 }
 
@@ -26,12 +26,13 @@
     align-items: center;
     width: 22%;
     justify-content: center;
-    margin: .5rem 0;
+    margin: 1rem 0;
 }
 
 .footer section a:first-of-type {
-    margin-right: .5rem;
+    margin-right: 1rem;
 }
+
 
 
 /* Responsive Design */
