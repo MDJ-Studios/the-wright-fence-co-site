@@ -5,21 +5,21 @@ const MyMap = () => {
     useEffect(() => {
         const initMap = () => {
             const latLng = { lat: 32.8223651463173, lng: -97.41485800430719 };
-            
-            const map = new google.maps.Map(document.getElementById('map'), {
+
+            const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 7.8,
                 center: latLng,
             });
 
             new google.maps.Circle({
-                strokeColor: '#632ed4',
+                strokeColor: "#632ed4",
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
-                fillColor: '#632ed4',
+                fillColor: "#632ed4",
                 fillOpacity: 0.55,
                 map,
                 center: latLng,
-                radius: 80467, 
+                radius: 80467,
             });
 
             new google.maps.Marker({
@@ -28,10 +28,10 @@ const MyMap = () => {
             });
         };
 
-        if (typeof window !== 'undefined' && typeof window.google !== 'undefined') {
+        if (typeof window !== "undefined" && typeof window.google !== "undefined") {
             initMap();
         } else {
-            const script = document.createElement('script');
+            const script = document.createElement("script");
             script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDtWCsngNdsOQIduF7xkjn8v4p7CSXmV6s&callback=initMap`;
             script.async = true;
             script.defer = true;
@@ -40,11 +40,10 @@ const MyMap = () => {
         }
     }, []);
 
-    return <div id="map" style={{ height: '400px', width: '100%' }} />;
+    return <div id="map" style={{ height: "400px", width: "100%" }} />;
 };
 
 export default function Contact() {
-    
     const getResetFormData = () => ({
         name: "",
         email: "",
@@ -54,9 +53,11 @@ export default function Contact() {
     const [formData, setFormData] = useState(getResetFormData());
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const encode = ({name, email, message}) => {
-        return `form-name=contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
-    }
+    const encode = ({ name, email, message }) => {
+        return `form-name=contact&name=${encodeURIComponent(name)}&email=${encodeURIComponent(
+            email,
+        )}&message=${encodeURIComponent(message)}`;
+    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -69,15 +70,13 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormSubmitted(true);
-
         await fetch('/__forms.html', {  // Updated URL for Netlify compatibility
             method: 'POST',
             headers: {
-                'Content-type': 'application/x-www-form-urlencoded'
+                "Content-type": "application/x-www-form-urlencoded",
             },
             body: encode(formData)
         });
-        
         setTimeout(() => {
             setFormSubmitted(false);
         }, 3000);
@@ -94,17 +93,8 @@ export default function Contact() {
                 </div>
                 <div className={s.form_parent}>
                     {!formSubmitted ? (
-                        <form 
-                            onSubmit={handleSubmit} 
-                            className={s.form_ele} 
-                            data-netlify="true"
-                            name="contact"
-                        >
-                            <input 
-                                type="hidden" 
-                                name="form-name" 
-                                value="contact" 
-                            />
+                        <form onSubmit={handleSubmit} className={s.form_ele} data-netlify="true" name="contact">
+                            <input type="hidden" name="form-name" value="contact" />
                             <div className={s.name_parent}>
                                 <input
                                     className={s.full}
