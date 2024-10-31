@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;  
+    height: 10rem;
     padding: 2.5rem 2.5rem;
     background-color: #000;
     border-bottom: 5px solid var(--primary);
@@ -30,7 +30,7 @@
 
 .navbar.phone {
     font-size: 1.5rem;
-    text-shadow: 3px 7px 21px var(--secondary)
+    text-shadow: 3px 7px 21px var(--secondary);
 }
 
 .mobileCallButtonContainer {
@@ -44,30 +44,30 @@
 .mobileCallButton {
     display: inline-block;
     width: 90%;
-    padding: 10px 20px; 
-    background-color: var(--primary); 
-    color: white; 
-    text-align: center; 
-    border-radius: 5px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    transition: background-color 0.3s; 
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
     font-family: var(--font-sans);
 }
 
 .mobileCallButton:hover {
-    background-color: var(--primary-light);; 
-    text-decoration: none; 
+    background-color: var(--primary-light);
+    text-decoration: none;
     color: white;
 }
 
 @media (max-width: 768px) {
-    .navbar{
+    .navbar {
         padding: 1.5rem 1.5rem;
         border-bottom: none;
     }
 
-    .mobileCallButtonContainer  {
+    .mobileCallButtonContainer {
         border-bottom: 5px solid var(--primary);
     }
 }

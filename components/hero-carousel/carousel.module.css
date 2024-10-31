@@ -10,90 +10,59 @@
 
 /* carousel images */
 
-.section_carousel img {
-    object-fit: cover;
+.imageFillContainer {
+    position: relative;
+    width: 100%;
+    height: 710px;
 }
 
-.slide {
-    opacity: 0.5;
-}
-
-.slide_active {
-    opacity: 1;
-    transition: opacity 2s ease-in-out;
+.imageFill {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
-}
-
-/* buttons */
-
-.button_parent {
-    display: flex;
-    justify-content: space-between;
-    width: 10rem;
-    height: 5rem;
-    position: absolute;
-    z-index: 1;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.button_parent button {
-    background: none;
-    border: none;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 20%;
-    background-color: rgba(56, 56, 56, 0.6);
-    cursor: pointer;
-}
-
-.button:hover {
-    color: rgb(71, 71, 71);
-    border: 2px solid rgb(190, 190, 190);
-    border-radius: 20%;
+    object-fit: cover;
 }
 
 /* heading and subheading */
 
 .caption {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     z-index: 2;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
     text-align: center;
-    color: var(--background); 
-    width: 80%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 2rem; 
+    color: var(--background);
+    height: max-content;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
 }
 
 .caption h2 {
-    font-size: 8vmin; 
+    font-size: 8vmin;
     margin-bottom: 1.2rem;
 }
 
 .caption p {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 /* cta button */
 
 .ctaButton {
-    margin-top: 2rem; 
+    margin-top: 2rem;
     padding: 10px 20px;
-    font-size: 1rem; 
+    font-size: 1rem;
     font-family: var(--font-sans);
-    color: var(--background); 
-    background-color: var(--primary); 
+    color: var(--background);
+    background-color: var(--primary);
     border: none;
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.3s; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     font-weight: 700;
 }
 
@@ -106,5 +75,8 @@
 @media (max-width: 768px) {
     .section_carousel {
         height: 600px;
+    }
+    .imageFillContainer {
+        height: 595px;
     }
 }
