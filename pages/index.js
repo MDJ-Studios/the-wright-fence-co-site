@@ -49,7 +49,7 @@ export default function Home() {
                 <main className={`${inter.className}`}>
                     <HeroCarousel />
                     <ServiceOffering />
-                    <Reviews />
+                    {/* <Reviews /> */}
                     <Contact />
                 </main>
             </Layout>
