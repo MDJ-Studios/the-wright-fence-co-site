@@ -11,6 +11,7 @@
 
 .section_reviews h2 {
     font-size: 3rem;
+    text-align: center;
     margin: 0 0 4rem 0;
 }
 
@@ -19,73 +20,44 @@
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    gap: 2rem; /* Adds space between cards */
+    padding: 0 1rem; /* Adds padding to prevent overflow on small screens */
 }
 
 /* child divs */
 .content_container {
-    /* width: calc(33.333% - 6rem); Adjust for three columns */
-    margin: 0 3rem; 
-    flex-direction: column;
-}
-
-.content_container h2 {
-    font-size: 1rem;
-}
-
-/* .content_image {
-    position: relative;
-    width: 100%;
-    height: 11rem;
-    margin-bottom: 1.5rem;
-} */
-
-/* .content_text {
-    width: 100%;
-    flex-direction: column;
-    text-align: start;
-} */
-
-.content_text h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-}
-
-.content_text p {
-    font-size: 1rem;
-}
-
-/* helper div */
-.flex {
+    flex: 1 1 300px; /* Makes each card responsive */
+    max-width: 350px; /* Ensures consistent width */
+    margin: 0; /* Removes extra margin */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.flex_wrap {
-    flex-flow: row wrap;
-}
-
-/* mobile css */
+/* mobile css adjustments */
 @media (max-width: 970px) {
     .parent_container {
-        height: max-content;
-        flex-flow: column nowrap; /* Stacks child containers vertically */
-        width: 40rem;
+        justify-content: center; /* Keeps cards centered */
+        gap: 1.5rem; /* Reduces space between cards */
     }
 
     .content_container {
-        width: 100%; /* Full width for each child container */
-        margin: 0 0 2rem 0;
+        max-width: 90%; /* Allows more flexibility on mobile */
     }
 }
 
 @media (max-width: 768px) {
     .section_reviews {
-        height: 1875px;
+        padding: 2rem 0; /* Removes fixed height */
     }
-    
+
     .section_reviews h2 {
         font-size: 2rem;
-        margin: 0 2rem 4rem 2rem;
+        margin: 0 1rem 3rem 1rem;
+    }
+
+    .content_container {
+        max-width: 100%; /* Full width on small screens */
+        padding: 1rem; /* Adds padding for readability */
     }
 }

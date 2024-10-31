@@ -1,0 +1,70 @@
+/* reviewContainer styling for mobile */
+.reviewContainer {
+    width: 100%;
+    max-width: 100%; /* Responsive width adjustment */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 2rem auto;
+}
+
+/* Adjust other styles to fit within the container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.fbIcon img {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+}
+
+.reviewText {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    color: #333;
+}
+
+.imageContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Allows images to wrap within container */
+    justify-content: center; /* Centers images in the container */
+    width: 100%; /* Ensures container width does not overflow */
+    overflow: hidden; /* Prevents images from overflowing out of the container */
+}
+
+.reviewImage {
+    flex: 1 1 45%; /* Allows images to scale and wrap flexibly */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Ensures image is scaled to fit within its container */
+}
