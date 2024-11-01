@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const navitemStyles = {
-    fontSize: "8vmin",
+    fontSize: "2rem",
     textTransform: "uppercase",
     padding: "1.5rem",
     fontWeight: "bold",
