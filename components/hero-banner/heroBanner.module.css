@@ -6,13 +6,25 @@
     padding: 0;
     background-color: black;
     border-bottom: 5px solid var(--primary);
+    overflow: hidden; /* Ensure any animation spillover is hidden */
 }
 
 .section_banner img {
     object-position: 0 -150px;
     object-fit: cover;
+    opacity: 0; /* Start fully transparent */
+    animation: fadeIn 2s ease-in forwards; /* Adjust duration as needed */
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* heading and subheading */
 

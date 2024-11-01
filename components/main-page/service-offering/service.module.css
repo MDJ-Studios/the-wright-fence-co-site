@@ -27,7 +27,7 @@
 .service_item {
     width: 15rem;
     height: 30rem;
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 1rem 1rem 7rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@
 
 
 .service_description {
-    text-align: center;
+    text-align: left;
     padding: 1rem;
 }
 
@@ -51,9 +51,13 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .service_item {
-        width: 23rem;
+        width: 250px;
     }
     .services_container {
         margin-bottom: 3rem;
+    }
+
+    .service_item  {
+        margin-bottom: 5rem;
     }
 }
