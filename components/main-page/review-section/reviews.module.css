@@ -52,6 +52,7 @@
 @media (max-width: 768px) {
     .section_reviews {
         padding: 2rem 0; /* Removes fixed height */
+        margin-top: 9rem;
     }
 
     .section_reviews h2 {
